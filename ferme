@@ -30,7 +30,7 @@
     <header>
     <div class="top-bar">
         <div class="top-left">
-            <a href="LIEN_VERS_VOTRE_BOUTIQUE" class="boutique-btn">Boutique en ligne</a>
+            <a href="https://coopcircuits.fr/gaec-ramounas-les-estraous/shop" class="boutique-btn">Boutique en ligne</a>
             <button class="menu-btn">Menu ☰</button>
             <div class="dropdown-menu">
                 <ul>
