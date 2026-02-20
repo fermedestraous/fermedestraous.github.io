@@ -111,21 +111,27 @@ input, textarea {
 }
 
 /* Boutons avec même hauteur et style */
+css
+Copier
+
 .boutique-btn, .menu-btn {
-    height: 40px; /* Hauteur fixe commune */
-    padding: 0 15px; /* Padding horizontal uniquement */
-    display: flex;
-    align-items: center; /* Centrage vertical */
-    justify-content: center; /* Centrage horizontal */
-    border-radius: 4px;
+    height: 40px; /* Hauteur fixe */
+    padding: 0 15px; /* Padding horizontal (ajustable) */
+    font-size: 1rem; /* Taille de texte identique */
     font-weight: 600;
     font-family: 'Inter', sans-serif;
+    line-height: 1; /* Évite les espaces indésirables */
+    display: inline-flex; /* Utilisation de flex pour le centrage */
+    align-items: center; /* Centrage vertical */
+    justify-content: center; /* Centrage horizontal */
     text-decoration: none;
     cursor: pointer;
     border: none;
     background-color: white;
-    color: var(--primary); /* Couleur du texte */
-    line-height: 1; /* Évite les espaces indésirables */
+    color: var(--primary);
+    border-radius: 4px;
+    box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
+    white-space: nowrap; /* Empêche le retour à la ligne */
 }
 
 /* Menu déroulant */
