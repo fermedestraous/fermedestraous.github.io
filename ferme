@@ -29,7 +29,7 @@
 <body>
     <header>
     <div class="top-bar">
-        <div class="top-left">
+        <div class="top-right"> <!-- Alignement à droite -->
             <a href="https://coopcircuits.fr/gaec-ramounas-les-estraous/shop" class="boutique-btn">Boutique en ligne</a>
             <button class="menu-btn">Menu ☰</button>
             <div class="dropdown-menu">
