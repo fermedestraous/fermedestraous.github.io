@@ -57,26 +57,32 @@
     </main>
 
     <script>
-        // REMPLACE CETTE URL par ton lien Google Sheets (CSV)
-        const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTB3Jt4kUljHwTgUbPsbVGGD0gC79-hA50OVEz2wfTbX-TX6LBxyBkJ3mCK-SPe8UFXgkzFLp9_VBxE/pubhtml';
+            const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTB3Jt4kUljHwTgUbPsbVGGD0gC79-hA50OVEz2wfTbX-TX6LBxyBkJ3mCK-SPe8UFXgkzFLp9_VBxE/pub?output=csv';
 
-        async function loadData() {
-            try {
-                const response = await fetch(sheetUrl);
-                const data = await response.text();
-                const rows = data.split('\n').slice(1); // On ignore l'entête
-                
-                rows.forEach(row => {
-                    const [key, value] = row.split(',');
-                    const elementId = `txt-${key.toLowerCase().trim().replace('_', '-')}`;
-                    const el = document.getElementById(elementId);
-                    if (el) el.innerText = value.trim();
-                });
-            } catch (error) {
-                console.error("Erreur de chargement des données", error);
-            }
-        }
-        loadData();
+            async function loadData() {
+                try {
+                    const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error("Erreur de chargement du fichier");
+                            const data = await response.text();
+                            const rows = data.split('\n').slice(1); // Ignore l'en-tête
+                            rows.forEach(row => {
+              
+                        if (!row.trim()) return; // Ignore les lignes vides
+                            const [key, value] = row.split(',');
+                            const elementId = `txt-${key.toLowerCase().trim().replace(/_/g, '-')}`;
+                            const el = document.getElementById(elementId);
+               
+                        if (el) el.textContent = value.trim();
+        });
+    } 
+            catch (error) {
+            console.error("Erreur :", error);
+        // Affiche un message utilisateur en cas d'erreur
+        document.getElementById('txt-introduction').textContent = "Impossible de charger les informations. Veuillez réessayer plus tard.";
+    }
+}
+
+loadData();
     </script>
 </body>
 </html>
