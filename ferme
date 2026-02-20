@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Ferme - Ferme d'Estraous</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="Photos/bandeau haut/panorama.jpeg" alt="Panorama Ferme d'Estraous">
+            <h1>Ferme d'Estraous</h1>
+        </div>
+        <!-- Menu de navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="ferme.html">Notre Ferme</a></li>
+                <li><a href="pratiques.html">Nos Pratiques</a></li>
+                <li><a href="animaux.html">Nos Animaux</a></li>
+                <li><a href="produits.html">Nos Produits</a></li>
+                <li><a href="trouver.html">Nous Trouver</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Notre Ferme</h2>
+
+        <section class="histoire">
+            <h3>Brève Histoire</h3>
+            <p>
+                Depuis 1996, nous défendons nos idéaux de protection de l’environnement, du bien-être animal, et de la santé humaine au sein de notre ferme.
+                C’est en 1997 que la fromagerie est construite, et les premières brebis laitières arrivent.
+                Puis en 2000, arrivent les premières vaches jersiaises, venues d’un troupeau renommé à Orléans.
+            </p>
+            <p>
+                En 2014, l’activité prend un nouvel essor, avec de nouvelles terres familiales qui étaient au repos.
+                C’est le début de la production du fromage de chèvre. Les ventes deviennent réservées aux marchés commingeois.
+            </p>
+            <p>
+                En 2015, les méthodes d’élevage et de transformation entament la conversion au cahier des charges du label Agriculture Biologique.
+                En 2016, le Groupement d’Exploitation en Commun (GAEC) familial a été formé.
+                La ferme obtient la certification « Agriculture Biologique » fin 2017.
+            </p>
+            <p>
+                C’est en 2024 que la ferme prend un tournant majeur : nous remplaçons la production de fromage par celle d’œufs, une source de protéines accessible à tous, et développons plus encore l’agroforesterie.
+            </p>
+        </section>
+
+        <section class="geographie">
+            <h3>Géographie</h3>
+            <p>
+                La ferme est constituée de 3 îlots :
+            </p>
+            <ul>
+                <li>
+                    <strong>Dans les Petites Pyrénées :</strong>
+                    <ul>
+                        <li>A Aulon, 20 ha sur des côteaux calcaires secs.</li>
+                        <li>A l’est de Lestelle-de-St-Martory, 25 hectares en côteaux argilo-calcaires et en plaine de la rivière du Jô.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Dans la plaine de la Garonne :</strong>
+                    <ul>
+                        <li>45 ha de plaine limono-sableuse.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
