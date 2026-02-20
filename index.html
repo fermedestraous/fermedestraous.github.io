@@ -59,30 +59,41 @@
     <script>
             const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTB3Jt4kUljHwTgUbPsbVGGD0gC79-hA50OVEz2wfTbX-TX6LBxyBkJ3mCK-SPe8UFXgkzFLp9_VBxE/pub?output=csv';
 
-            async function loadData() {
-                try {
-                    const response = await fetch(sheetUrl);
-                        if (!response.ok) throw new Error("Erreur de chargement du fichier");
-                            const data = await response.text();
-                            const rows = data.split('\n').slice(1); // Ignore l'en-tête
-                            rows.forEach(row => {
-              
-                        if (!row.trim()) return; // Ignore les lignes vides
-                            const [key, value] = row.split(',');
-                            const elementId = `txt-${key.toLowerCase().trim().replace(/_/g, '-')}`;
-                            const el = document.getElementById(elementId);
-               
-                        if (el) el.textContent = value.trim();
-        });
-    } 
-            catch (error) {
-            console.error("Erreur :", error);
-        // Affiche un message utilisateur en cas d'erreur
-        document.getElementById('txt-introduction').textContent = "Impossible de charger les informations. Veuillez réessayer plus tard.";
-    }
-}
+    async function loadData() {
+        try {
+            const response = await fetch(sheetUrl);
+            const data = await response.text();
+            
+            // On sépare le texte par ligne
+            const rows = data.split(/\r?\n/);
 
-loadData();
+            rows.forEach((row, index) => {
+                if (index === 0) return; // On saute la ligne de titre (Section / Contenu)
+
+                // On utilise une expression régulière pour bien séparer la clé du reste du texte
+                // même s'il y a des virgules dans la phrase.
+                const match = row.match(/^"?([^",]+)"?,?(.+)$/);
+                
+                if (match) {
+                    const key = match[1].trim().toLowerCase().replace(/_/g, '-');
+                    let value = match[2].trim();
+
+                    // Nettoyage des guillemets doubles que Google Sheets ajoute parfois
+                    value = value.replace(/^"|"$/g, '').replace(/""/g, '"');
+
+                    const elementId = `txt-${key}`;
+                    const el = document.getElementById(elementId);
+                    
+                    if (el) {
+                        el.innerText = value;
+                    }
+                }
+            });
+        } catch (e) {
+            console.error("Erreur de chargement :", e);
+        }
+    }
+    loadData();
     </script>
 </body>
 </html>
