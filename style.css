@@ -63,7 +63,7 @@ input, textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px s
     background-color: #5a9b8e; /* Couleur verte pour harmoniser avec votre thème */
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Alignement à gauche */
     align-items: center;
 }
 
@@ -75,6 +75,7 @@ input, textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px s
 
 /* Bouton "Boutique en ligne" */
 .boutique-btn {
+    height: 40px; /* Hauteur fixe pour les deux boutons */
     background-color: white;
     color: #5a9b8e;
     padding: 8px 15px;
@@ -86,6 +87,7 @@ input, textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px s
 
 /* Bouton "Menu" */
 .menu-btn {
+    height: 40px; /* Hauteur fixe pour les deux boutons */
     background-color: white;
     color: #5a9b8e;
     padding: 8px 15px;
