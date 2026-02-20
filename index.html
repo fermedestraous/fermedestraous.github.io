@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferme d'Estraous - Bio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="banner">
+            <img src="Photos/bandeau haut/panorama.jpeg" alt="Panorama Ferme d'Estraous">
+            <h1>Ferme d'Estraous</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <span class="badge">Agriculture Biologique</span>
+            <p id="txt-introduction">Chargement des infos...</p>
+            <img src="Photos/bio/certifié_AB.jpg" alt="Logo Bio" class="bio-logo">
+        </section>
+
+        <section class="products">
+            <h2>Nos Produits</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🥩 Prochain colis de viande</h3>
+                    <p id="txt-prochain-colis">Vérification...</p>
+                </div>
+            </div>
+            <div class="cta-container">
+                <a href="LIEN_VERS_TA_PAGE_COMMANDE" class="btn">Commander mes produits</a>
+            </div>
+        </section>
+
+        <section class="markets">
+            <h2>Retrouvez-nous sur les marchés</h2>
+            <ul>
+                <li><strong>Lundi :</strong> Salies-du-Salat</li>
+                <li><strong>Samedi :</strong> Cazères ou Aspet n</li>
+                <li><strong>Occasionnellement les Mercredi :</strong> Boulogne-sur-Gesse ou Aspet</li>
+            </ul>
+        </section>
+
+        <section class="contact">
+            <h2>Nous contacter</h2>
+            <form action="https://formspree.io/f/VOTRE_ID" method="POST">
+                <input type="text" name="name" placeholder="Votre nom" required>
+                <input type="email" name="email" placeholder="Votre email" required>
+                <textarea name="message" placeholder="Votre message"></textarea>
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        // REMPLACE CETTE URL par ton lien Google Sheets (CSV)
+        const sheetUrl = 'TON_LIEN_CSV_ICI';
+
+        async function loadData() {
+            try {
+                const response = await fetch(sheetUrl);
+                const data = await response.text();
+                const rows = data.split('\n').slice(1); // On ignore l'entête
+                
+                rows.forEach(row => {
+                    const [key, value] = row.split(',');
+                    const elementId = `txt-${key.toLowerCase().trim().replace('_', '-')}`;
+                    const el = document.getElementById(elementId);
+                    if (el) el.innerText = value.trim();
+                });
+            } catch (error) {
+                console.error("Erreur de chargement des données", error);
+            }
+        }
+        loadData();
+    </script>
+</body>
+</html>
