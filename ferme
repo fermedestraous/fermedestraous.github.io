@@ -3,35 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notre Ferme - Ferme d'Estraous</title>
+    <title>Ferme d'Estraous - Bio</title>
+
+    <meta name="description" content="Ferme d'Estraous - Viande bio, vente directe à la ferme et marchés locaux en Haute-Garonne.">
+
     <link rel="stylesheet" href="style.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
-<script>
-    // Sélectionner le bouton menu et le menu déroulant
-    const menuBtn = document.querySelector('.menu-btn');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
-
-    // Afficher/masquer le menu déroulant au clic
-    menuBtn.addEventListener('click', () => {
-        dropdownMenu.classList.toggle('active');
-    });
-
-    // Masquer le menu si on clique ailleurs
-    document.addEventListener('click', (event) => {
-        if (!menuBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
-            dropdownMenu.classList.remove('active');
-        }
-    });
-</script>
-
 <body>
-    <header>
+
+<header>
     <div class="top-bar">
-        <div class="top-right"> <!-- Alignement à droite -->
-            <a href="https://coopcircuits.fr/gaec-ramounas-les-estraous/shop" class="boutique-btn">Boutique en ligne</a>
+        <div class="top-right">
+ <a href="https://coopcircuits.fr/gaec-ramounas-les-estraous/shop" class="boutique-btn">Boutique en ligne</a>
+
             <button class="menu-btn">Menu ☰</button>
+
             <div class="dropdown-menu">
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
@@ -44,69 +33,112 @@
             </div>
         </div>
     </div>
+
     <div class="banner">
         <img src="Photos/bandeau haut/panorama.jpeg" alt="Panorama Ferme d'Estraous">
         <h1>Ferme d'Estraous</h1>
     </div>
 </header>
 
-    <main class="container">
-        <h2>Notre Ferme</h2>
+<main class="container">
 
-        <section class="histoire">
-            <h3>Brève Histoire</h3>
-            <p>
-                Depuis 1996, nous défendons nos idéaux de protection de l’environnement, du bien-être animal, et de la santé humaine au sein de notre ferme.
-                C’est en 1997 que la fromagerie est construite, et les premières brebis laitières arrivent.
-                Puis en 2000, arrivent les premières vaches jersiaises, venues d’un troupeau renommé à Orléans.
-            </p>
-            <p>
-                En 2014, l’activité prend un nouvel essor, avec de nouvelles terres familiales qui étaient au repos.
-                C’est le début de la production du fromage de chèvre. Les ventes deviennent réservées aux marchés commingeois.
-            </p>
-            <p>
-                En 2015, les méthodes d’élevage et de transformation entament la conversion au cahier des charges du label Agriculture Biologique.
-                En 2016, le Groupement d’Exploitation en Commun (GAEC) familial a été formé.
-                La ferme obtient la certification « Agriculture Biologique » fin 2017.
-            </p>
-            <p>
-                C’est en 2024 que la ferme prend un tournant majeur : nous remplaçons la production de fromage par celle d’œufs, une source de protéines accessible à tous, et développons plus encore l’agroforesterie.
-            </p>
-        </section>
+    <section class="intro">
+        <span class="badge">Agriculture Biologique</span>
+        <p id="txt-introduction">Chargement des infos...</p>
+        <img src="Photos/bio/certifié_AB.jpg" alt="Logo Bio" class="bio-logo">
+    </section>
 
-        <section class="geographie">
-            <h3>Géographie</h3>
-            <p>
-                La ferme est constituée de 3 îlots :
-            </p>
-            <ul>
-                <li>
-                    <strong>Dans les Petites Pyrénées :</strong>
-                    <ul>
-                        <li>A Aulon, 20 ha sur des côteaux calcaires secs.</li>
-                        <li>A l’est de Lestelle-de-St-Martory, 25 hectares en côteaux argilo-calcaires et en plaine de la rivière du Jô.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Dans la plaine de la Garonne :</strong>
-                    <ul>
-                        <li>45 ha de plaine limono-sableuse.</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-    </main>
+    <section class="products">
+        <h2>Nos Produits</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>🥩 Prochain colis de viande</h3>
+                <p id="txt-prochain-colis">Vérification...</p>
+            </div>
+        </div>
+
+        <div class="cta-container">
+            <a href="LIEN_VERS_TA_PAGE_COMMANDE" class="btn">Commander mes produits</a>
+        </div>
+    </section>
+
+    <section class="markets">
+        <h2>Retrouvez-nous sur les marchés</h2>
+        <ul>
+            <li><strong>Lundi :</strong> Salies-du-Salat</li>
+            <li><strong>Samedi :</strong> Cazères ou Aspet (en alternance)</li>
+            <li><strong>Occasionnellement le Mercredi :</strong> Boulogne-sur-Gesse ou Aspet</li>
+        </ul>
+    </section>
+
+    <section class="contact">
+        <h2>Nous contacter</h2>
+        <form action="https://formspree.io/f/VOTRE_ID" method="POST">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" placeholder="Votre message"></textarea>
+            <button type="submit" class="btn">Envoyer</button>
+        </form>
+    </section>
+
+</main>
+
+<!-- Script menu déplacé ici -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.querySelector('.menu-btn');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+
+    menuBtn.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!menuBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove('active');
+        }
+    });
+});
+</script>
+
+<!-- Script Google Sheets -->
+<script>
+const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTB3Jt4kUljHwTgUbPsbVGGD0gC79-hA50OVEz2wfTbX-TX6LBxyBkJ3mCK-SPe8UFXgkzFLp9_VBxE/pub?output=csv';
+
+async function loadData() {
+    try {
+        const response = await fetch(sheetUrl);
+        const data = await response.text();
+
+        const rows = data.split(/\r?\n/);
+
+        rows.forEach((row, index) => {
+            if (index === 0) return;
+
+            const match = row.match(/^"?([^",]+)"?,?(.+)$/);
+
+            if (match) {
+                const key = match[1].trim().toLowerCase().replace(/_/g, '-');
+                let value = match[2].trim();
+
+                value = value.replace(/^"|"$/g, '').replace(/""/g, '"');
+
+                const elementId = `txt-${key}`;
+                const el = document.getElementById(elementId);
+
+                if (el) {
+                    el.innerText = value;
+                }
+            }
+        });
+
+    } catch (e) {
+        console.error("Erreur de chargement :", e);
+    }
+}
+
+loadData();
+</script>
+
 </body>
 </html>
-
-// Navigation
-<nav>
-    <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="ferme.html">Notre Ferme</a></li>
-        <li><a href="pratiques.html">Nos Pratiques</a></li>
-        <li><a href="animaux.html">Nos Animaux</a></li>
-        <li><a href="produits.html">Nos Produits</a></li>
-        <li><a href="trouver.html">Nous Trouver</a></li>
-    </ul>
-</nav>
