@@ -35,3 +35,25 @@ input, textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px s
     .grid { grid-template-columns: 1fr; }
     .banner h1 { font-size: 2rem; }
 }
+
+
+/* Style pour la page "Notre Ferme" */
+.histoire, .geographie {
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.histoire h3, .geographie h3 {
+    color: #5a9b8e;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+}
+
+.geographie ul {
+    margin-left: 20px;
+}
+
+.geographie li {
+    margin-bottom: 10px;
+}
