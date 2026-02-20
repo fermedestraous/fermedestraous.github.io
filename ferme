@@ -9,22 +9,27 @@
 </head>
 <body>
     <header>
-        <div class="banner">
-            <img src="Photos/bandeau haut/panorama.jpeg" alt="Panorama Ferme d'Estraous">
-            <h1>Ferme d'Estraous</h1>
+    <div class="top-bar">
+        <div class="top-left">
+            <a href="LIEN_VERS_VOTRE_BOUTIQUE" class="boutique-btn">Boutique en ligne</a>
+            <button class="menu-btn">Menu ☰</button>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="ferme.html">Notre Ferme</a></li>
+                    <li><a href="pratiques.html">Nos Pratiques</a></li>
+                    <li><a href="animaux.html">Nos Animaux</a></li>
+                    <li><a href="produits.html">Nos Produits</a></li>
+                    <li><a href="trouver.html">Nous Trouver</a></li>
+                </ul>
+            </div>
         </div>
-        <!-- Menu de navigation -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="ferme.html">Notre Ferme</a></li>
-                <li><a href="pratiques.html">Nos Pratiques</a></li>
-                <li><a href="animaux.html">Nos Animaux</a></li>
-                <li><a href="produits.html">Nos Produits</a></li>
-                <li><a href="trouver.html">Nous Trouver</a></li>
-            </ul>
-        </nav>
-    </header>
+    </div>
+    <div class="banner">
+        <img src="Photos/bandeau haut/panorama.jpeg" alt="Panorama Ferme d'Estraous">
+        <h1>Ferme d'Estraous</h1>
+    </div>
+</header>
 
     <main class="container">
         <h2>Notre Ferme</h2>
