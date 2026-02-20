@@ -36,34 +36,12 @@ input, textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px s
     .banner h1 { font-size: 2rem; }
 }
 
-
-/* Style pour la page "Notre Ferme" */
-.histoire, .geographie {
-    margin-bottom: 30px;
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-}
-
-.histoire h3, .geographie h3 {
-    color: #5a9b8e;
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 15px;
-}
-
-.geographie ul {
-    margin-left: 20px;
-}
-
-.geographie li {
-    margin-bottom: 10px;
-}
-
 /* Barre du haut avec boutons */
 .top-bar {
     background-color: #5a9b8e; /* Couleur verte pour harmoniser avec votre thème */
     padding: 10px 20px;
     display: flex;
-    justify-content: flex-start; /* Alignement à gauche */
+    justify-content: flex-end; /* Alignement à droite */
     align-items: center;
 }
 
@@ -75,7 +53,6 @@ input, textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px s
 
 /* Bouton "Boutique en ligne" */
 .boutique-btn {
-    height: 40px; /* Hauteur fixe pour les deux boutons */
     background-color: white;
     color: #5a9b8e;
     padding: 8px 15px;
@@ -83,11 +60,11 @@ input, textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px s
     text-decoration: none;
     font-weight: 600;
     font-family: 'Inter', sans-serif;
+    height: 40px; /* Hauteur fixe pour les deux boutons */
 }
 
 /* Bouton "Menu" */
 .menu-btn {
-    height: 40px; /* Hauteur fixe pour les deux boutons */
     background-color: white;
     color: #5a9b8e;
     padding: 8px 15px;
@@ -96,6 +73,7 @@ input, textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px s
     font-weight: 600;
     font-family: 'Inter', sans-serif;
     cursor: pointer;
+    height: 40px; /* Hauteur fixe pour les deux boutons */
 }
 
 /* Menu déroulant (masqué par défaut) */
@@ -130,4 +108,27 @@ input, textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px s
 /* Afficher le menu déroulant quand la classe "active" est ajoutée */
 .dropdown-menu.active {
     display: block;
+}
+
+
+
+/* Style pour la page "Notre Ferme" */
+.histoire, .geographie {
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.histoire h3, .geographie h3 {
+    color: #5a9b8e;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+}
+
+.geographie ul {
+    margin-left: 20px;
+}
+
+.geographie li {
+    margin-bottom: 10px;
 }
