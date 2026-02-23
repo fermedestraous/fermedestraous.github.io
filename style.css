@@ -60,6 +60,7 @@ a { color: inherit; }
 
 header {
     position: relative;
+    background-color: var(--primary);
 }
 
 /* Bandeau fixe en haut */
@@ -1252,6 +1253,7 @@ footer {
     color: var(--text);
     line-height: 1.8;
     margin-bottom: 16px;
+    text-align: justify;
 }
 
 .soins-remedes {
