@@ -69,11 +69,12 @@ header {
     left: 0;
     right: 0;
     z-index: 200;
+    padding: 8px 24px;
 }
 
 /* Compensation pour que le contenu ne passe pas sous le bandeau */
 body {
-    padding-top: 62px;
+    padding-top: 54px;
 }
 
 /* ── Barre du haut ── */
@@ -621,31 +622,12 @@ section {
     font-size: 0.88rem;
 }
 
-.deco-circle {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    background: var(--primary);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--white);
-    gap: 6px;
-    box-shadow: 0 8px 32px rgba(42, 74, 34, 0.3);
-}
-
-.deco-circle span {
-    font-size: 2rem;
-}
-
-.deco-circle p {
-    font-family: var(--font-title);
-    font-size: 0.95rem;
-    line-height: 1.3;
-    font-style: italic;
-    color: rgba(255,255,255,0.85);
+.marches-map {
+    width: 340px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
 }
 
 /* ════════════════════════════════════════
@@ -859,7 +841,7 @@ footer {
         gap: 32px;
     }
 
-    .deco-circle {
+    .deco-circle, .marches-map {
         display: none;
     }
 
