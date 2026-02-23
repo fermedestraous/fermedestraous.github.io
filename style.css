@@ -74,7 +74,11 @@ header {
 
 /* Compensation pour que le contenu ne passe pas sous le bandeau */
 body {
-    padding-top: 54px;
+    padding-top: 0;
+}
+
+.banner {
+    margin-top: 54px;
 }
 
 /* ── Barre du haut ── */
