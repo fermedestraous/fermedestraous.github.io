@@ -3,132 +3,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferme d'Estraous - Bio</title>
+    <title>Ferme d'Estraous — Agriculture Biologique</title>
+    <meta name="description" content="Ferme d'Estraous — Viande bio, vente directe et marchés locaux en Haute-Garonne, au pied des Pyrénées.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-
-<script>
-    // Sélectionner le bouton menu et le menu déroulant
-    const menuBtn = document.querySelector('.menu-btn');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
-
-    // Afficher/masquer le menu déroulant au clic
-    menuBtn.addEventListener('click', () => {
-        dropdownMenu.classList.toggle('active');
-    });
-
-    // Masquer le menu si on clique ailleurs
-    document.addEventListener('click', (event) => {
-        if (!menuBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
-            dropdownMenu.classList.remove('active');
-        }
-    });
-</script>
-    
 <body>
 
-   <header>
+<!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+<header>
     <div class="top-bar">
-        <div class="top-right"> <!-- Alignement à droite -->
-            <a href="https://coopcircuits.fr/gaec-ramounas-les-estraous/shop" class="boutique-btn">Boutique en ligne</a>
-            <button class="menu-btn">Menu ☰</button>
-            <div class="dropdown-menu">
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="ferme.html">Notre Ferme</a></li>
-                    <li><a href="pratiques.html">Nos Pratiques</a></li>
-                    <li><a href="animaux.html">Nos Animaux</a></li>
-                    <li><a href="produits.html">Nos Produits</a></li>
-                    <li><a href="trouver.html">Nous Trouver</a></li>
-                </ul>
+        <div class="top-left">
+            <span class="ferme-name-small">Ferme d'Estraous</span>
+        </div>
+        <div class="top-right">
+            <a href="https://coopcircuits.fr/gaec-ramounas-les-estraous/shop" class="boutique-btn" target="_blank">
+                🛒 Boutique en ligne
+            </a>
+            <div class="menu-container">
+                <button class="menu-btn" aria-label="Ouvrir le menu">Menu ☰</button>
+                <nav class="dropdown-menu" aria-label="Navigation principale">
+                    <ul>
+                        <li><a href="index.html" class="active">Accueil</a></li>
+                        <li><a href="ferme.html">Notre Ferme</a></li>
+                        <li><a href="pratiques.html">Nos Pratiques</a></li>
+                        <li><a href="animaux.html">Nos Animaux</a></li>
+                        <li><a href="produits.html">Nos Produits</a></li>
+                        <li><a href="trouver.html">Nous Trouver</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
+
     <div class="banner">
-        <img src="Photos/bandeau haut/panorama.jpeg" alt="Panorama Ferme d'Estraous">
-        <h1>Ferme d'Estraous</h1>
+        <img src="Photos/bandeau haut/panorama.jpeg" alt="Vue panoramique de la Ferme d'Estraous">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <span class="banner-eyebrow">Agriculture Biologique · Haute-Garonne</span>
+            <h1>Ferme d'Estraous</h1>
+            <p class="banner-tagline">Élevage en plein air, au pied des Pyrénées</p>
+            <a href="https://coopcircuits.fr/gaec-ramounas-les-estraous/shop" class="banner-cta" target="_blank">Commander nos produits</a>
+        </div>
     </div>
 </header>
 
-    <main class="container">
-        <section class="intro">
-            <span class="badge">Agriculture Biologique</span>
-            <p id="txt-introduction">Chargement des infos...</p>
-            <img src="Photos/bio/certifié_AB.jpg" alt="Logo Bio" class="bio-logo">
-        </section>
+<!-- ═══════════════════════════════ MAIN ═══════════════════════════════ -->
+<main>
 
-        <section class="products">
-            <h2>Nos Produits</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>🥩 Prochain colis de viande</h3>
-                    <p id="txt-prochain-colis">Vérification...</p>
+    <!-- ── Section intro ── -->
+    <section class="section-intro">
+        <div class="container intro-grid">
+            <div class="intro-text">
+                <span class="badge">🌿 Certifié Agriculture Biologique</span>
+                <p id="txt-introduction" class="intro-paragraph">
+                    Une ferme familiale ancrée dans les traditions du Comminges, où l'élevage se pratique dans le respect du vivant, des saisons et du territoire.
+                </p>
+            </div>
+            <div class="intro-logo">
+                <img src="Photos/bio/certifié_AB.jpg" alt="Label Agriculture Biologique" class="bio-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Séparateur décoratif ── -->
+    <div class="divider">
+        <span>✦</span>
+    </div>
+
+    <!-- ── Section valeurs ── -->
+    <section class="section-valeurs">
+        <div class="container">
+            <div class="valeurs-grid">
+                <div class="valeur-card">
+                    <div class="valeur-icon">🌾</div>
+                    <h3>Bio & Local</h3>
+                    <p>Certification Agriculture Biologique, sans OGM ni pesticides de synthèse.</p>
+                </div>
+                <div class="valeur-card">
+                    <div class="valeur-icon">🐄</div>
+                    <h3>Bien-être animal</h3>
+                    <p>Nos animaux vivent en plein air, sur des prairies naturelles au pied des Pyrénées.</p>
+                </div>
+                <div class="valeur-card">
+                    <div class="valeur-icon">🤝</div>
+                    <h3>Circuit court</h3>
+                    <p>Vente directe, sans intermédiaire — vous savez d'où vient votre viande.</p>
                 </div>
             </div>
-            <div class="cta-container">
-                <a href="LIEN_VERS_TA_PAGE_COMMANDE" class="btn">Commander mes produits</a>
+        </div>
+    </section>
+
+    <!-- ── Section produits ── -->
+    <section class="section-produits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos Produits</h2>
+                <p class="section-subtitle">Viande bio, élevée localement et vendue en circuits courts — les marchés de plein vent du Comminges.</p>
             </div>
-        </section>
+            <div class="produits-grid produits-grid--single">
+                <div class="produit-card highlight">
+                    <div class="produit-card-inner">
+                        <span class="produit-tag">À venir</span>
+                        <h3>🥩 Prochain colis de viande</h3>
+                        <p id="txt-prochain-colis">Chargement des informations…</p>
+                    </div>
+                </div>
+                </div>
+            <div class="cta-container">
+                <a href="https://coopcircuits.fr/gaec-ramounas-les-estraous/shop" class="btn" target="_blank">🛒 Réserver un colis</a>
+            </div>
+        </div>
+    </section>
 
-        <section class="markets">
-            <h2>Retrouvez-nous sur les marchés</h2>
-            <ul>
-                <li><strong>Lundi :</strong> Salies-du-Salat</li>
-                <li><strong>Samedi :</strong> Cazères ou Aspet (en alternance)</li>
-                <li><strong>Occasionnellement le Mercredi :</strong> Boulogne-sur-Gesse ou Aspet</li>
-            </ul>
-        </section>
+    <!-- ── Section marchés ── -->
+    <section class="section-marches">
+        <div class="container">
+            <div class="marches-inner">
+                <div class="marches-text">
+                    <h2>Retrouvez-nous sur les marchés</h2>
+                    <p class="section-subtitle">En Haute-Garonne, tout au long de l'année</p>
+                    <ul class="marches-list">
+                        <li>
+                            <span class="marche-jour">Lundi</span>
+                            <span class="marche-lieu">Marché de Salies-du-Salat</span>
+                        </li>
+                        <li>
+                            <span class="marche-jour">Samedi</span>
+                            <span class="marche-lieu">Cazères ou Aspet <em>(en alternance)</em></span>
+                        </li>
+                        <li>
+                            <span class="marche-jour">Mercredi <small>occasionnel</small></span>
+                            <span class="marche-lieu">Boulogne-sur-Gesse ou Aspet</span>
+                        </li>
+                    </ul>
+                    <a href="trouver.html" class="btn-outline">Voir toutes nos adresses →</a>
+                </div>
+                <div class="marches-deco" aria-hidden="true">
+                    <div class="deco-circle">
+                        <span>🏔️</span>
+                        <p>Haute-<br>Garonne</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section class="contact">
-            <h2>Nous contacter</h2>
-            <form action="https://formspree.io/f/VOTRE_ID" method="POST">
-                <input type="text" name="name" placeholder="Votre nom" required>
-                <input type="email" name="email" placeholder="Votre email" required>
-                <textarea name="message" placeholder="Votre message"></textarea>
-                <button type="submit" class="btn">Envoyer</button>
+    <!-- ── Section contact ── -->
+    <section class="section-contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nous contacter</h2>
+                <p class="section-subtitle">Une question sur nos produits, une commande spéciale ? Écrivez-nous.</p>
+            </div>
+            <form class="contact-form" action="https://formspree.io/f/VOTRE_ID" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Votre nom</label>
+                        <input type="text" id="name" name="name" placeholder="Jean Dupont" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Votre email</label>
+                        <input type="email" id="email" name="email" placeholder="jean@exemple.fr" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Votre message</label>
+                    <textarea id="message" name="message" placeholder="Bonjour, je souhaite…" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn">Envoyer le message</button>
             </form>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <script>
-            const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTB3Jt4kUljHwTgUbPsbVGGD0gC79-hA50OVEz2wfTbX-TX6LBxyBkJ3mCK-SPe8UFXgkzFLp9_VBxE/pub?output=csv';
+</main>
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer>
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <span class="footer-title">Ferme d'Estraous</span>
+            <p>GAEC Ramounas-les-Estraous<br>Haute-Garonne, Occitanie</p>
+        </div>
+        <nav class="footer-nav">
+            <a href="ferme.html">Notre Ferme</a>
+            <a href="pratiques.html">Nos Pratiques</a>
+            <a href="animaux.html">Nos Animaux</a>
+            <a href="produits.html">Nos Produits</a>
+            <a href="trouver.html">Nous Trouver</a>
+        </nav>
+        <div class="footer-boutique">
+            <a href="https://coopcircuits.fr/gaec-ramounas-les-estraous/shop" class="btn" target="_blank">Boutique en ligne</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 Ferme d'Estraous · Tous droits réservés</p>
+    </div>
+</footer>
+
+<!-- ═══════════════════════════════ SCRIPTS ═══════════════════════════════ -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    // ── Menu déroulant ──
+    const menuBtn = document.querySelector('.menu-btn');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+
+    menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('active');
+        menuBtn.setAttribute('aria-expanded', dropdownMenu.classList.contains('active'));
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!menuBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove('active');
+            menuBtn.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    // ── Animations au scroll ──
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.valeur-card, .produit-card, .section-header').forEach(el => {
+        observer.observe(el);
+    });
+
+    // ── Chargement Google Sheets ──
+    const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTB3Jt4kUljHwTgUbPsbVGGD0gC79-hA50OVEz2wfTbX-TX6LBxyBkJ3mCK-SPe8UFXgkzFLp9_VBxE/pub?output=csv';
 
     async function loadData() {
         try {
             const response = await fetch(sheetUrl);
             const data = await response.text();
-            
-            // On sépare le texte par ligne
             const rows = data.split(/\r?\n/);
 
             rows.forEach((row, index) => {
-                if (index === 0) return; // On saute la ligne de titre (Section / Contenu)
-
-                // On utilise une expression régulière pour bien séparer la clé du reste du texte
-                // même s'il y a des virgules dans la phrase.
+                if (index === 0) return;
                 const match = row.match(/^"?([^",]+)"?,?(.+)$/);
-                
                 if (match) {
                     const key = match[1].trim().toLowerCase().replace(/_/g, '-');
-                    let value = match[2].trim();
-
-                    // Nettoyage des guillemets doubles que Google Sheets ajoute parfois
-                    value = value.replace(/^"|"$/g, '').replace(/""/g, '"');
-
-                    const elementId = `txt-${key}`;
-                    const el = document.getElementById(elementId);
-                    
-                    if (el) {
-                        el.innerText = value;
-                    }
+                    let value = match[2].trim().replace(/^"|"$/g, '').replace(/""/g, '"');
+                    const el = document.getElementById(`txt-${key}`);
+                    if (el) el.innerText = value;
                 }
             });
         } catch (e) {
             console.error("Erreur de chargement :", e);
         }
     }
+
     loadData();
-    </script>
+});
+</script>
+
 </body>
 </html>
