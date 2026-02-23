@@ -380,7 +380,7 @@ section {
 }
 
 .bio-logo {
-    width: 90px;
+    width: 160px;
     height: auto;
     opacity: 0.9;
 }
@@ -1300,4 +1300,18 @@ footer {
     .pratiques-grid { grid-template-columns: 1fr; }
     .bienetre-grid { grid-template-columns: 1fr; }
     .soins-inner { grid-template-columns: 1fr; gap: 28px; }
+}
+
+/* ── Liste intro page d'accueil ── */
+.intro-list {
+    margin: 10px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.intro-list li {
+    font-size: 0.97rem;
+    color: var(--text);
+    line-height: 1.6;
 }
