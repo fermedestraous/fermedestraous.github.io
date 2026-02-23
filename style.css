@@ -1435,3 +1435,291 @@ footer {
     transform: rotate(-2deg) scale(1.08);
     transform-origin: center center;
 }
+
+/* ════════════════════════════════════════
+   PAGE NOS PRODUITS
+════════════════════════════════════════ */
+
+.section-produit {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.section-produit--alt {
+    background: var(--bg);
+}
+
+/* ── Bloc philosophie ── */
+.philosophie-block {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius-lg);
+    padding: 28px 32px;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.philosophie-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.philosophie-block h3 {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    color: var(--primary);
+    font-style: italic;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.philosophie-block p {
+    font-size: 0.96rem;
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+.philosophie-block p:last-child {
+    margin-bottom: 0;
+}
+
+/* ── Grille viande ── */
+.viande-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 36px;
+}
+
+.viande-section {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--primary);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.viande-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.viande-section:nth-child(2) { transition-delay: 0.1s; }
+
+.viande-titre {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.viande-items {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.viande-item {
+    padding-bottom: 14px;
+    border-bottom: 1px dashed var(--border);
+}
+
+.viande-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.viande-label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+.viande-item p {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    line-height: 1.65;
+    text-align: justify;
+}
+
+/* ── Modalités de vente ── */
+.modalites-block {
+    background: linear-gradient(135deg, #eaf2e2 0%, #f4f8f0 100%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 32px;
+    margin-bottom: 8px;
+}
+
+.modalites-block p {
+    font-size: 0.96rem;
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 14px;
+    text-align: justify;
+}
+
+.modalites-block p:last-of-type {
+    margin-bottom: 20px;
+}
+
+.modalites-cta {
+    text-align: center;
+}
+
+/* ── Section œufs ── */
+.oeufs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.oeufs-text p {
+    font-size: 0.96rem;
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 14px;
+    text-align: justify;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.oeufs-text.visible p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.saviez-vous {
+    background: var(--primary);
+    color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s;
+}
+
+.saviez-vous.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.saviez-vous-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.saviez-vous-header span {
+    font-size: 1.5rem;
+}
+
+.saviez-vous-header h3 {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    color: var(--white);
+    font-style: italic;
+}
+
+.saviez-vous p {
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.75;
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+.saviez-vous p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .viande-grid { grid-template-columns: 1fr; }
+    .oeufs-grid { grid-template-columns: 1fr; }
+    .philosophie-block, .modalites-block { padding: 20px; }
+}
+
+/* ── Layout photo + texte côte à côte (page animaux) ── */
+.animal-bloc {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 32px;
+    align-items: start;
+    margin-bottom: 24px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animal-bloc.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animal-bloc--reverse {
+    grid-template-columns: 1fr 300px;
+}
+
+.animal-bloc--reverse .animal-photo {
+    order: 2;
+}
+
+.animal-bloc--reverse .animal-content {
+    order: 1;
+}
+
+.animal-photo {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.animal-content h3 {
+    font-family: var(--font-title);
+    font-size: 1.35rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.animal-content p {
+    font-size: 0.93rem;
+    color: var(--text);
+    line-height: 1.75;
+    margin-top: 8px;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .animal-bloc,
+    .animal-bloc--reverse {
+        grid-template-columns: 1fr;
+    }
+    .animal-bloc--reverse .animal-photo,
+    .animal-bloc--reverse .animal-content {
+        order: unset;
+    }
+    .animal-photo {
+        height: 200px;
+    }
+}
