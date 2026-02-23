@@ -60,6 +60,7 @@ a { color: inherit; }
 
 header {
     position: relative;
+    padding-top: 54px;
     background-color: var(--primary);
 }
 
@@ -71,10 +72,14 @@ header {
     right: 0;
     z-index: 200;
     padding: 8px 24px;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .banner {
-    margin-top: 54px;
+    margin-top: 0;
 }
 
 .intro-paragraph {
@@ -82,15 +87,6 @@ header {
 }
 
 /* ── Barre du haut ── */
-.top-bar {
-    background-color: var(--primary);
-    padding: 12px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    z-index: 100;
-}
 
 .top-left .ferme-name-small {
     font-family: var(--font-title);
