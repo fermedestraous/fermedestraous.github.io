@@ -3,141 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferme d'Estraous - Bio</title>
-
-    <meta name="description" content="Ferme d'Estraous - Viande bio, vente directe à la ferme et marchés locaux en Haute-Garonne.">
-
+    <title>Notre Ferme — Ferme d'Estraous</title>
+    <meta name="description" content="L'histoire et la géographie de la Ferme d'Estraous, élevage biologique en Haute-Garonne.">
     <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
+<!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
 <header>
     <div class="top-bar">
+        <div class="top-left"></div>
         <div class="top-right">
- <a href="https://coopcircuits.fr/gaec-ramounas-les-estraous/shop" class="boutique-btn">Boutique en ligne</a>
-
-            <button class="menu-btn">Menu ☰</button>
-
-            <div class="dropdown-menu">
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="ferme.html">Notre Ferme</a></li>
-                    <li><a href="pratiques.html">Nos Pratiques</a></li>
-                    <li><a href="animaux.html">Nos Animaux</a></li>
-                    <li><a href="produits.html">Nos Produits</a></li>
-                    <li><a href="trouver.html">Nous Trouver</a></li>
-                </ul>
+            <a href="https://coopcircuits.fr/gaec-ramounas-les-estraous/shop" class="boutique-btn" target="_blank">
+                🛒 Boutique en ligne
+            </a>
+            <div class="menu-container">
+                <button class="menu-btn" aria-label="Ouvrir le menu">Menu ☰</button>
+                <nav class="dropdown-menu" aria-label="Navigation principale">
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="ferme.html" class="active">Notre Ferme</a></li>
+                        <li><a href="pratiques.html">Nos Pratiques</a></li>
+                        <li><a href="animaux.html">Nos Animaux</a></li>
+                        <li><a href="produits.html">Nos Produits</a></li>
+                        <li><a href="trouver.html">Nous Trouver</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
 
     <div class="banner">
-        <img src="Photos/bandeau haut/panorama.jpeg" alt="Panorama Ferme d'Estraous">
-        <h1>Ferme d'Estraous</h1>
+        <img src="Photos/bandeau-haut/panorama.jpeg" alt="Vue panoramique de la Ferme d'Estraous">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <span class="banner-eyebrow">Depuis 1996</span>
+            <h1>Notre Ferme</h1>
+            <p class="banner-tagline">Une histoire familiale ancrée dans le Comminges</p>
+        </div>
     </div>
 </header>
 
-<main class="container">
+<!-- ═══════════════════════════════ MAIN ═══════════════════════════════ -->
+<main>
 
-    <section class="intro">
-        <span class="badge">Agriculture Biologique</span>
-        <p id="txt-introduction">Chargement des infos...</p>
-        <img src="Photos/bio/certifié_AB.jpg" alt="Logo Bio" class="bio-logo">
-    </section>
+    <!-- ── Section histoire ── -->
+    <section class="section-histoire">
+        <div class="container">
+            <div class="section-header">
+                <h2>Brève Histoire</h2>
+                <p class="section-subtitle">Près de 30 ans d'engagement pour une agriculture respectueuse</p>
+            </div>
 
-    <section class="products">
-        <h2>Nos Produits</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>🥩 Prochain colis de viande</h3>
-                <p id="txt-prochain-colis">Vérification...</p>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-date">1996</div>
+                    <div class="timeline-content">
+                        <p>Naissance de la ferme, portée par nos idéaux de <strong>protection de l'environnement</strong>, de bien-être animal et de santé humaine.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">1997</div>
+                    <div class="timeline-content">
+                        <p>Construction de la <strong>fromagerie</strong> et arrivée des premières brebis laitières.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2000</div>
+                    <div class="timeline-content">
+                        <p>Arrivée des premières <strong>vaches jersiaises</strong>, issues d'un troupeau renommé à Orléans.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2014</div>
+                    <div class="timeline-content">
+                        <p>Nouvel essor avec de nouvelles terres familiales. Début de la <strong>production de fromage de chèvre</strong>. Les ventes se concentrent sur les marchés commingeois.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2015</div>
+                    <div class="timeline-content">
+                        <p>Début de la <strong>conversion au label Agriculture Biologique</strong> — élevage et transformation.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2016</div>
+                    <div class="timeline-content">
+                        <p>Formation du <strong>GAEC familial</strong> — Groupement d'Exploitation en Commun.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2017</div>
+                    <div class="timeline-content">
+                        <p>Obtention de la <strong>certification Agriculture Biologique</strong> 🌿</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item timeline-item--highlight">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <p>Tournant majeur : remplacement de la production de fromage par celle d'<strong>œufs</strong>, une source de protéines accessible à tous. Développement de l'<strong>agroforesterie</strong>.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </section>
 
-        <div class="cta-container">
-            <a href="LIEN_VERS_TA_PAGE_COMMANDE" class="btn">Commander mes produits</a>
+    <!-- ── Photo intermédiaire ── -->
+    <div class="photo-bandeau">
+        <img src="Photos/ferme/paysage_vaches.JPG" alt="Vaches au pâturage sur les prairies de la Ferme d'Estraous">
+        <div class="photo-bandeau-caption">Nos vaches en plein air, sur les coteaux du Comminges</div>
+    </div>
+
+    <!-- ── Séparateur ── -->
+    <div class="divider"><span>✦</span></div>
+
+    <!-- ── Section géographie ── -->
+    <section class="section-geo">
+        <div class="container">
+            <div class="section-header">
+                <h2>Notre Territoire</h2>
+                <p class="section-subtitle">90 hectares répartis sur trois îlots en Haute-Garonne</p>
+            </div>
+
+            <div class="geo-grid">
+
+                <div class="geo-card">
+                    <div class="geo-icon">🏔️</div>
+                    <div class="geo-lieu">Aulon</div>
+                    <div class="geo-surface">20 ha</div>
+                    <p>Coteaux calcaires secs dans les <strong>Petites Pyrénées</strong>.</p>
+                    <img src="Photos/ferme/poules_maison.JPG" alt="La ferme d'Aulon avec vue sur les Pyrénées" class="geo-photo">
+                </div>
+
+                <div class="geo-card">
+                    <div class="geo-icon">🌿</div>
+                    <div class="geo-lieu">Lestelle-de-St-Martory</div>
+                    <div class="geo-surface">25 ha</div>
+                    <p>Coteaux argilo-calcaires et plaine de la rivière du <strong>Jô</strong>, dans les Petites Pyrénées.</p>
+                </div>
+
+                <div class="geo-card">
+                    <div class="geo-icon">🌾</div>
+                    <div class="geo-lieu">Plaine de la Garonne</div>
+                    <div class="geo-surface">45 ha</div>
+                    <p>Plaine <strong>limono-sableuse</strong> en bord de Garonne.</p>
+                </div>
+
+            </div>
+
+            <div class="geo-total">
+                <span>Surface totale :</span>
+                <strong>90 hectares</strong>
+            </div>
+
         </div>
-    </section>
-
-    <section class="markets">
-        <h2>Retrouvez-nous sur les marchés</h2>
-        <ul>
-            <li><strong>Lundi :</strong> Salies-du-Salat</li>
-            <li><strong>Samedi :</strong> Cazères ou Aspet (en alternance)</li>
-            <li><strong>Occasionnellement le Mercredi :</strong> Boulogne-sur-Gesse ou Aspet</li>
-        </ul>
-    </section>
-
-    <section class="contact">
-        <h2>Nous contacter</h2>
-        <form action="https://formspree.io/f/VOTRE_ID" method="POST">
-            <input type="text" name="name" placeholder="Votre nom" required>
-            <input type="email" name="email" placeholder="Votre email" required>
-            <textarea name="message" placeholder="Votre message"></textarea>
-            <button type="submit" class="btn">Envoyer</button>
-        </form>
     </section>
 
 </main>
 
-<!-- Script menu déplacé ici -->
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer>
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <span class="footer-title">Ferme d'Estraous</span>
+            <p>GAEC Ramounas-les-Estraous<br>Haute-Garonne, Occitanie</p>
+        </div>
+        <nav class="footer-nav">
+            <a href="ferme.html">Notre Ferme</a>
+            <a href="pratiques.html">Nos Pratiques</a>
+            <a href="animaux.html">Nos Animaux</a>
+            <a href="produits.html">Nos Produits</a>
+            <a href="trouver.html">Nous Trouver</a>
+        </nav>
+        <div class="footer-boutique">
+            <a href="https://coopcircuits.fr/gaec-ramounas-les-estraous/shop" class="btn" target="_blank">Boutique en ligne</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 Ferme d'Estraous · Tous droits réservés</p>
+    </div>
+</footer>
+
+<!-- ═══════════════════════════════ SCRIPTS ═══════════════════════════════ -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+
+    // ── Menu déroulant ──
     const menuBtn = document.querySelector('.menu-btn');
     const dropdownMenu = document.querySelector('.dropdown-menu');
 
-    menuBtn.addEventListener('click', () => {
+    menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
         dropdownMenu.classList.toggle('active');
+        menuBtn.setAttribute('aria-expanded', dropdownMenu.classList.contains('active'));
     });
 
     document.addEventListener('click', (event) => {
         if (!menuBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
             dropdownMenu.classList.remove('active');
+            menuBtn.setAttribute('aria-expanded', 'false');
         }
     });
-});
-</script>
 
-<!-- Script Google Sheets -->
-<script>
-const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTB3Jt4kUljHwTgUbPsbVGGD0gC79-hA50OVEz2wfTbX-TX6LBxyBkJ3mCK-SPe8UFXgkzFLp9_VBxE/pub?output=csv';
-
-async function loadData() {
-    try {
-        const response = await fetch(sheetUrl);
-        const data = await response.text();
-
-        const rows = data.split(/\r?\n/);
-
-        rows.forEach((row, index) => {
-            if (index === 0) return;
-
-            const match = row.match(/^"?([^",]+)"?,?(.+)$/);
-
-            if (match) {
-                const key = match[1].trim().toLowerCase().replace(/_/g, '-');
-                let value = match[2].trim();
-
-                value = value.replace(/^"|"$/g, '').replace(/""/g, '"');
-
-                const elementId = `txt-${key}`;
-                const el = document.getElementById(elementId);
-
-                if (el) {
-                    el.innerText = value;
-                }
-            }
+    // ── Animations au scroll ──
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
         });
+    }, { threshold: 0.1 });
 
-    } catch (e) {
-        console.error("Erreur de chargement :", e);
-    }
-}
+    document.querySelectorAll('.timeline-item, .geo-card, .section-header').forEach(el => {
+        observer.observe(el);
+    });
 
-loadData();
+});
 </script>
 
 </body>
