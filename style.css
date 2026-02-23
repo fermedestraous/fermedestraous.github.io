@@ -1108,3 +1108,196 @@ footer {
 @media (max-width: 768px) {
     .photo-bandeau { height: 220px; }
 }
+
+/* ════════════════════════════════════════
+   PAGE NOS PRATIQUES AGRICOLES
+════════════════════════════════════════ */
+
+.section-pratiques {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.pratiques-intro {
+    max-width: 720px;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: 1.05rem;
+    color: var(--text);
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.pratiques-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.pratique-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-bottom: 3px solid var(--accent);
+    border-radius: var(--radius-lg);
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.2s;
+}
+
+.pratique-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pratique-card:nth-child(2) { transition-delay: 0.1s; }
+.pratique-card:nth-child(3) { transition-delay: 0.2s; }
+
+.pratique-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.pratique-icon {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.pratique-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.pratique-card p {
+    font-size: 0.93rem;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+/* ── Bien-être animal ── */
+.section-bienetre {
+    background: var(--bg);
+}
+
+.bienetre-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.bienetre-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
+    border-radius: var(--radius-lg);
+    padding: 26px 24px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.bienetre-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bienetre-card:nth-child(2) { transition-delay: 0.1s; }
+.bienetre-card:nth-child(3) { transition-delay: 0.15s; }
+.bienetre-card:nth-child(4) { transition-delay: 0.2s; }
+
+.bienetre-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.bienetre-emoji {
+    font-size: 1.8rem;
+}
+
+.bienetre-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.25rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.bienetre-card p {
+    font-size: 0.93rem;
+    color: var(--text-light);
+    line-height: 1.75;
+}
+
+/* ── Soins naturels ── */
+.section-soins {
+    background: var(--card-bg);
+    border-top: 1px solid var(--border);
+}
+
+.soins-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.soins-text p {
+    font-size: 0.97rem;
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.soins-remedes {
+    background: var(--primary);
+    color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+}
+
+.soins-remedes h3 {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    color: var(--white);
+    font-style: italic;
+}
+
+.remedes-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.remedes-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.9);
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.remedes-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.remedes-list li span {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .pratiques-grid { grid-template-columns: 1fr; }
+    .bienetre-grid { grid-template-columns: 1fr; }
+    .soins-inner { grid-template-columns: 1fr; gap: 28px; }
+}
