@@ -623,7 +623,7 @@ section {
 }
 
 .marches-map {
-    width: 340px;
+    width: 460px;
     flex-shrink: 0;
     border-radius: 12px;
     overflow: hidden;
