@@ -10,17 +10,14 @@
 </head>
 <body>
 
-<!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
 <header>
     <div class="top-bar">
         <div class="top-left"></div>
         <div class="top-right">
-            <a href="https://coopcircuits.fr/gaec-ramounas-les-estraous/shop" class="boutique-btn" target="_blank">
-                🛒 Boutique en ligne
-            </a>
+            <a href="https://coopcircuits.fr/gaec-ramounas-les-estraous/shop" class="boutique-btn" target="_blank">🛒 Boutique en ligne</a>
             <div class="menu-container">
                 <button class="menu-btn" aria-label="Ouvrir le menu">Menu ☰</button>
-                <nav class="dropdown-menu" aria-label="Navigation principale">
+                <nav class="dropdown-menu">
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
                         <li><a href="ferme.html">Notre Ferme</a></li>
@@ -33,9 +30,8 @@
             </div>
         </div>
     </div>
-
     <div class="banner">
-        <img src="Photos/Poules/pourles_vatouAMODIF.JPG" alt="Chien patou gardant les poules de la Ferme d'Estraous" class="banner-img-rotated">
+        <img src="Photos/Poules/pourles_vatouAMODIF.JPG" alt="Chien patou gardant les poules" class="banner-img-rotated">
         <div class="banner-overlay"></div>
         <div class="banner-content">
             <span class="banner-eyebrow">Élevage biologique · Plein air</span>
@@ -45,31 +41,27 @@
     </div>
 </header>
 
-<!-- ═══════════════════════════════ MAIN ═══════════════════════════════ -->
 <main>
 
-    <!-- ══════════════════════════════
-         SECTION VACHES
-    ══════════════════════════════ -->
     <section class="section-animaux">
         <div class="container">
             <div class="section-header">
                 <h2>🐄 Nos Vaches</h2>
             </div>
 
-            <div class="race-grid">
-
-                <div class="race-card">
-                    <img src="Photos/vaches/vache_ferme.JPG" alt="Vaches de la Ferme d'Estraous au pâturage" class="race-photo">
+            <div class="animal-bloc">
+                <img src="Photos/Vaches/vache_ferme.JPG" alt="Vaches de la Ferme d'Estraous au pâturage" class="animal-photo">
+                <div class="animal-content">
                     <div class="race-card-header">
                         <h3>La Jersiaise</h3>
                         <span class="race-tag">Laitière principale</span>
                     </div>
                     <p>Les Jersiaises, notre principale source de lait, sont très friandes d'herbe. Leur lait est le plus riche, particulièrement en protéines, matières grasses, phosphore et calcium. De plus, ses molécules de matières grasses sont plus petites et plus digestes par rapport aux autres races bovines.</p>
                     <p>Sa viande est de qualité persillée, c'est-à-dire qu'elle contient de fines infiltrations naturelles de gras à l'intérieur du muscle de la viande. Ce gras fond à la cuisson apportant moelleux, saveur et évite que la viande ne soit sèche.</p>
-
                 </div>
+            </div>
 
+            <div class="race-grid" style="margin-top: 24px;">
                 <div class="race-card">
                     <div class="race-card-header">
                         <h3>La Simmental</h3>
@@ -77,101 +69,80 @@
                     </div>
                     <p>La Simmental est la seule vraie race mixte (à la fois lait et viande). Sa viande est de qualité persillée elle aussi.</p>
                 </div>
-
-                <div class="race-card race-card--wide">
+                <div class="race-card">
                     <div class="race-card-header">
                         <h3>Limousine, Hereford & Angus</h3>
                         <span class="race-tag">Races allaitantes</span>
                     </div>
                     <p>Les autres vaches sont de races limousine, hereford ou angus, pures ou croisées.</p>
                 </div>
-
             </div>
         </div>
     </section>
 
     <div class="divider"><span>✦</span></div>
 
-    <!-- ══════════════════════════════
-         SECTION BREBIS
-    ══════════════════════════════ -->
     <section class="section-animaux section-animaux--alt">
         <div class="container">
             <div class="section-header">
                 <h2>🐑 Nos Brebis</h2>
             </div>
 
-            <div class="race-grid">
-
-                <div class="race-card">
-                    <img src="Photos/Mouton/Mouton.jpg" alt="Brebis camerounaises et bélier de la Ferme d'Estraous" class="race-photo">
+            <div class="animal-bloc animal-bloc--reverse">
+                <img src="Photos/Mouton/Mouton.jpg" alt="Brebis camerounaises et bélier de la Ferme d'Estraous" class="animal-photo">
+                <div class="animal-content">
                     <div class="race-card-header">
                         <h3>La Tarasconnaise</h3>
                         <span class="race-tag">Rustique des Pyrénées</span>
                     </div>
                     <p>Les Tarasconnaises, réputées pour leur rusticité et leur adaptation aux climats variés, offrent une viande savoureuse et fine, particulièrement appréciée pour son persillage et sa tendreté. Leur chair, riche en saveurs, est souvent associée à une texture fondante, idéale pour les plats traditionnels.</p>
-                </div>
-
-                <div class="race-card">
-                    <div class="race-card-header">
+                    <div class="race-card-header" style="margin-top: 20px;">
                         <h3>La Camerounaise</h3>
                         <span class="race-tag">Viande fine & goûteuse</span>
                     </div>
                     <p>Les brebis camerounaises se distinguent par leur viande maigre mais goûteuse, adaptée aux régimes locaux et aux conditions climatiques variées. Leur viande, souvent plus ferme, est recherchée pour sa teneur en protéines et son goût très fin et délicatement parfumé, reflétant leur alimentation diversifiée.</p>
                 </div>
-
             </div>
 
             <div class="race-note">
                 Ces deux races, bien que différentes, sont des atouts majeurs pour la production de viande ovine de qualité, répondant à des attentes culinaires variées.
             </div>
-
         </div>
     </section>
 
     <div class="divider"><span>✦</span></div>
 
-    <!-- ══════════════════════════════
-         SECTION POULES
-    ══════════════════════════════ -->
     <section class="section-animaux">
         <div class="container">
             <div class="section-header">
                 <h2>🐔 Nos Poules</h2>
             </div>
 
-            <div class="race-grid">
-
-                <div class="race-card">
-                    <img src="Photos/ferme/poules_maison.JPG" alt="Poules en liberté à la Ferme d'Estraous" class="race-photo">
+            <div class="animal-bloc">
+                <img src="Photos/ferme/poules_maison.JPG" alt="Poules en liberté dans le parc agroforestier" class="animal-photo">
+                <div class="animal-content">
                     <div class="race-card-header">
                         <h3>La Géline de Touraine</h3>
                         <span class="race-tag">Race noire · Œufs d'exception</span>
                     </div>
                     <p>La Géline de Touraine, de couleur noire, est une race robuste du bocage de la région de Tours, qui produit des œufs d'exception : à la coquille solide et au jaune crémeux, riche en oméga-3 et vitamines. Leur saveur intense et leur texture onctueuse en font un atout pour la cuisine, salée ou sucrée. Adaptées à l'élevage en plein air, elles garantissent de septembre à juin une production régulière et de qualité.</p>
-                </div>
-
-                <div class="race-card">
-                    <div class="race-card-header">
+                    <div class="race-card-header" style="margin-top: 20px;">
                         <h3>Les Poules Rousses</h3>
                         <span class="race-tag">Dociles & productives</span>
                     </div>
                     <p>Les poules rousses sont des poules dociles et productives. Leur tempérament calme et leur bonne rusticité allient rendement et plaisir d'élevage. Leurs œufs, de taille moyenne à grande, offrent une coquille résistante et un jaune doré nutritif.</p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- ── Photo poules ── -->
     <div class="photo-bandeau">
-        <img src="Photos/ferme/poules_maison.JPG" alt="Poules en liberté devant la ferme d'Aulon">
-        <div class="photo-bandeau-caption">Nos poules en liberté à Aulon, avec vue sur les Pyrénées</div>
+        <img src="Photos/Poules/pourles_vatouAMODIF.JPG" alt="Poules en liberté dans le parc agroforestier" class="banner-img-rotated">
+        <div class="photo-bandeau-caption">Nos poules en liberté dans le parc planté en agroforesterie</div>
     </div>
 
 </main>
 
-<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
 <footer>
     <div class="container footer-inner">
         <div class="footer-brand">
@@ -198,29 +169,20 @@
 document.addEventListener("DOMContentLoaded", () => {
     const menuBtn = document.querySelector('.menu-btn');
     const dropdownMenu = document.querySelector('.dropdown-menu');
-
     menuBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         dropdownMenu.classList.toggle('active');
-        menuBtn.setAttribute('aria-expanded', dropdownMenu.classList.contains('active'));
     });
-
     document.addEventListener('click', (event) => {
         if (!menuBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
             dropdownMenu.classList.remove('active');
-            menuBtn.setAttribute('aria-expanded', 'false');
         }
     });
-
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add('visible');
-        });
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.1 });
-
-    document.querySelectorAll('.race-card, .section-header').forEach(el => observer.observe(el));
+    document.querySelectorAll('.race-card, .animal-bloc, .section-header').forEach(el => observer.observe(el));
 });
 </script>
-
 </body>
 </html>
