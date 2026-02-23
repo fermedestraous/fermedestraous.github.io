@@ -868,3 +868,239 @@ footer {
 
     section { padding: 40px 0; }
 }
+
+/* ════════════════════════════════════════
+   PAGE NOTRE FERME — TIMELINE
+════════════════════════════════════════ */
+
+.section-histoire {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.timeline {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 80px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--border), var(--accent), var(--border));
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 28px;
+    margin-bottom: 32px;
+    align-items: start;
+    opacity: 0;
+    transform: translateX(-16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.timeline-item:nth-child(2) { transition-delay: 0.05s; }
+.timeline-item:nth-child(3) { transition-delay: 0.10s; }
+.timeline-item:nth-child(4) { transition-delay: 0.15s; }
+.timeline-item:nth-child(5) { transition-delay: 0.20s; }
+.timeline-item:nth-child(6) { transition-delay: 0.25s; }
+.timeline-item:nth-child(7) { transition-delay: 0.30s; }
+.timeline-item:nth-child(8) { transition-delay: 0.35s; }
+
+.timeline-date {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 2px;
+    position: relative;
+}
+
+.timeline-date::after {
+    content: '';
+    position: absolute;
+    right: -7px;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    border: 2px solid var(--card-bg);
+}
+
+.timeline-content {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.timeline-item--highlight .timeline-date {
+    color: var(--accent);
+}
+
+.timeline-item--highlight .timeline-date::after {
+    background: var(--primary);
+    width: 14px;
+    height: 14px;
+    right: -8px;
+}
+
+.timeline-item--highlight .timeline-content {
+    border-left-color: var(--primary);
+    background: #eef5e8;
+}
+
+/* ════════════════════════════════════════
+   PAGE NOTRE FERME — GÉOGRAPHIE
+════════════════════════════════════════ */
+
+.section-geo {
+    background: var(--bg);
+}
+
+.geo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.geo-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--primary);
+    border-radius: var(--radius-lg);
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.2s;
+}
+
+.geo-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.geo-card:nth-child(2) { transition-delay: 0.1s; }
+.geo-card:nth-child(3) { transition-delay: 0.2s; }
+
+.geo-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.geo-icon { font-size: 2rem; margin-bottom: 10px; }
+
+.geo-lieu {
+    font-family: var(--font-title);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.geo-surface {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--white);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 3px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.geo-card p {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.geo-total {
+    text-align: center;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: var(--radius);
+    padding: 16px 24px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.geo-total strong {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+    .timeline::before { left: 60px; }
+    .timeline-item { grid-template-columns: 60px 1fr; gap: 16px; }
+    .timeline-date { font-size: 1.1rem; }
+    .geo-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Photo bandeau ── */
+.photo-bandeau {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+}
+
+.photo-bandeau img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 60%;
+    filter: brightness(0.85);
+}
+
+.photo-bandeau-caption {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+    background: rgba(0,0,0,0.45);
+    color: white;
+    font-family: var(--font-title);
+    font-style: italic;
+    font-size: 0.9rem;
+    padding: 5px 12px;
+    border-radius: 4px;
+}
+
+/* ── Photo dans carte geo ── */
+.geo-photo {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin-top: 14px;
+}
+
+@media (max-width: 768px) {
+    .photo-bandeau { height: 220px; }
+}
