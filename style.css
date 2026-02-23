@@ -72,13 +72,12 @@ header {
     padding: 8px 24px;
 }
 
-/* Compensation pour que le contenu ne passe pas sous le bandeau */
-body {
-    padding-top: 0;
-}
-
 .banner {
     margin-top: 54px;
+}
+
+.intro-paragraph {
+    text-align: justify;
 }
 
 /* ── Barre du haut ── */
