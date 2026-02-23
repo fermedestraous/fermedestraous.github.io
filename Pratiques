@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Pratiques Agricoles — Ferme d'Estraous</title>
+    <meta name="description" content="Les pratiques agricoles biologiques et respectueuses de la Ferme d'Estraous en Haute-Garonne.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+<header>
+    <div class="top-bar">
+        <div class="top-left"></div>
+        <div class="top-right">
+            <a href="https://coopcircuits.fr/gaec-ramounas-les-estraous/shop" class="boutique-btn" target="_blank">
+                🛒 Boutique en ligne
+            </a>
+            <div class="menu-container">
+                <button class="menu-btn" aria-label="Ouvrir le menu">Menu ☰</button>
+                <nav class="dropdown-menu" aria-label="Navigation principale">
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="ferme.html">Notre Ferme</a></li>
+                        <li><a href="pratiques.html" class="active">Nos Pratiques</a></li>
+                        <li><a href="animaux.html">Nos Animaux</a></li>
+                        <li><a href="produits.html">Nos Produits</a></li>
+                        <li><a href="trouver.html">Nous Trouver</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="Photos/bandeau-haut/panorama.jpeg" alt="Vue panoramique de la Ferme d'Estraous">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <span class="banner-eyebrow">Agriculture Biologique · Sans intrants chimiques</span>
+            <h1>Nos Pratiques Agricoles</h1>
+            <p class="banner-tagline">Pour la santé de l'environnement et de l'homme</p>
+        </div>
+    </div>
+</header>
+
+<!-- ═══════════════════════════════ MAIN ═══════════════════════════════ -->
+<main>
+
+    <!-- ── Section pratiques vertueuses ── -->
+    <section class="section-pratiques">
+        <div class="container">
+
+            <div class="section-header">
+                <h2>Nos pratiques vertueuses</h2>
+                <p class="section-subtitle">Pour la santé de l'environnement et de l'homme</p>
+            </div>
+
+            <div class="pratiques-intro">
+                <p>Notre système de production est constitué de grandes surfaces herbagères, avec une flore la plus diversifiée possible. Nous pratiquons une agriculture extensive sans aucun produit chimique de synthèse, ni d'OGM.</p>
+            </div>
+
+            <div class="pratiques-grid">
+
+                <div class="pratique-card">
+                    <div class="pratique-icon">🌱</div>
+                    <h3>Variétés & cultures</h3>
+                    <p>Nous utilisons des variétés anciennes et/ou résistantes aux maladies. La rotation des cultures est primordiale, autant que le travail du sol et sa dynamisation naturelle.</p>
+                </div>
+
+                <div class="pratique-card">
+                    <div class="pratique-icon">🌾</div>
+                    <h3>Autosuffisance</h3>
+                    <p>Nous fonctionnons autant que possible en autosuffisance, produisant l'intégralité du foin et des céréales servant à l'alimentation de nos animaux.</p>
+                </div>
+
+                <div class="pratique-card">
+                    <div class="pratique-icon">🚗</div>
+                    <h3>Circuits courts</h3>
+                    <p>Nos ventes, exclusivement en circuits courts, limitent nos émissions de CO2.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Photo intermédiaire ── -->
+    <div class="photo-bandeau">
+        <img src="Photos/ferme/paysage_vaches.JPG" alt="Vaches en plein air sur les prairies de la Ferme d'Estraous">
+        <div class="photo-bandeau-caption">Nos vaches en plein air, toute l'année</div>
+    </div>
+
+    <!-- ── Séparateur ── -->
+    <div class="divider"><span>✦</span></div>
+
+    <!-- ── Section bien-être animal ── -->
+    <section class="section-bienetre">
+        <div class="container">
+
+            <div class="section-header">
+                <h2>Le respect du bien-être animal</h2>
+                <p class="section-subtitle">Des animaux qui vivent dans de grands espaces herbagers</p>
+            </div>
+
+            <div class="bienetre-grid">
+
+                <div class="bienetre-card">
+                    <div class="bienetre-header">
+                        <span class="bienetre-emoji">🐔</span>
+                        <h3>Nos poules</h3>
+                    </div>
+                    <p>Nos poules disposent d'un parc planté en agroforesterie : 9 000 m² plantés avec une grande variété d'arbres et d'arbustes (dont environ 70 % d'espèces natives), afin d'améliorer le bien-être et proposer une alimentation variée à nos poules.</p>
+                </div>
+
+                <div class="bienetre-card">
+                    <div class="bienetre-header">
+                        <span class="bienetre-emoji">🐑</span>
+                        <h3>Nos brebis</h3>
+                    </div>
+                    <p>Nos brebis vont au pré quasiment 365 jours par an, de 1 heure à 10-12 heures par jour, selon la saison et les conditions météorologiques.</p>
+                </div>
+
+                <div class="bienetre-card">
+                    <div class="bienetre-header">
+                        <span class="bienetre-emoji">🐄</span>
+                        <h3>Nos vaches</h3>
+                    </div>
+                    <p>Nos vaches (jeunes et adultes) sont toute l'année en plein air, et disposent d'abris adéquats, niches, bâtiments, ou abris naturels comme les bois et les landes. Nos jeunes ruminants passent généralement leur premier mois (ou leurs 2 premiers mois) au pré avec leur mère, puis sont rentrés et disposent d'un petit accès à l'extérieur.</p>
+                </div>
+
+                <div class="bienetre-card">
+                    <div class="bienetre-header">
+                        <span class="bienetre-emoji">🏠</span>
+                        <h3>Dans les bâtiments</h3>
+                    </div>
+                    <p>À l'intérieur des bâtiments, l'espace pour chaque animal dépasse toujours très largement le minimum admis, le multipliant par 2 jusqu'à 5.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ── Séparateur ── -->
+    <div class="divider"><span>✦</span></div>
+
+    <!-- ── Section santé & soins ── -->
+    <section class="section-soins">
+        <div class="container">
+
+            <div class="section-header">
+                <h2>Santé & soins naturels</h2>
+                <p class="section-subtitle">La prévention avant tout</p>
+            </div>
+
+            <div class="soins-inner">
+                <div class="soins-text">
+                    <p>La prévention des maladies, par une alimentation riche en minéraux, ainsi que beaucoup d'espace à la fois dans les prés et les bâtiments, sont des atouts pour la santé des animaux.</p>
+                    <p>En cas de maladie ou de blessure, les soins « réflexes » sont des cataplasmes d'argiles vertes et blanches, terre de diatomée, des compléments de charbon végétal et de la consoude, comme reminéralisant naturel. Notre médecine privilégie les produits naturels.</p>
+                </div>
+                <div class="soins-remedes">
+                    <h3>Nos remèdes naturels</h3>
+                    <ul class="remedes-list">
+                        <li><span>🌿</span> Argiles vertes et blanches</li>
+                        <li><span>🌱</span> Terre de diatomée</li>
+                        <li><span>🪨</span> Charbon végétal</li>
+                        <li><span>🌾</span> Consoude (reminéralisant naturel)</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer>
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <span class="footer-title">Ferme d'Estraous</span>
+            <p>GAEC Ramounas-les-Estraous<br>Haute-Garonne, Occitanie</p>
+        </div>
+        <nav class="footer-nav">
+            <a href="ferme.html">Notre Ferme</a>
+            <a href="pratiques.html">Nos Pratiques</a>
+            <a href="animaux.html">Nos Animaux</a>
+            <a href="produits.html">Nos Produits</a>
+            <a href="trouver.html">Nous Trouver</a>
+        </nav>
+        <div class="footer-boutique">
+            <a href="https://coopcircuits.fr/gaec-ramounas-les-estraous/shop" class="btn" target="_blank">Boutique en ligne</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 Ferme d'Estraous · Tous droits réservés</p>
+    </div>
+</footer>
+
+<!-- ═══════════════════════════════ SCRIPTS ═══════════════════════════════ -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const menuBtn = document.querySelector('.menu-btn');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+
+    menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('active');
+        menuBtn.setAttribute('aria-expanded', dropdownMenu.classList.contains('active'));
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!menuBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove('active');
+            menuBtn.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.pratique-card, .bienetre-card, .section-header').forEach(el => {
+        observer.observe(el);
+    });
+
+});
+</script>
+
+</body>
+</html>
