@@ -1725,3 +1725,161 @@ footer {
         height: 200px;
     }
 }
+
+/* ════════════════════════════════════════
+   PAGE NOUS TROUVER
+════════════════════════════════════════ */
+
+.section-trouver {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.section-trouver--alt {
+    background: var(--bg);
+}
+
+.trouver-intro {
+    max-width: 720px;
+    margin: 0 auto 40px;
+    text-align: justify;
+    font-size: 1.02rem;
+    color: var(--text);
+    line-height: 1.8;
+}
+
+/* ── Cartes marchés ── */
+.marches-trouver {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.marche-trouver-card {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    gap: 24px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px 24px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateX(-16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.marche-trouver-card.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.marche-trouver-card:nth-child(2) { transition-delay: 0.1s; }
+.marche-trouver-card:nth-child(3) { transition-delay: 0.2s; }
+
+.marche-regulier {
+    border-left: 4px solid var(--primary);
+}
+
+.marche-occasionnel {
+    border-left: 4px solid var(--accent);
+}
+
+.marche-trouver-jour {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-align: center;
+}
+
+.marche-occasionnel .marche-trouver-jour {
+    color: var(--accent);
+}
+
+.marche-trouver-info h3 {
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.ou {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.marche-frequence {
+    font-size: 0.82rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* ── Étapes colis ── */
+.colis-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.colis-etape {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.colis-etape.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.colis-etape:nth-child(2) { transition-delay: 0.1s; }
+.colis-etape:nth-child(3) { transition-delay: 0.2s; }
+
+.colis-numero {
+    width: 48px;
+    height: 48px;
+    background: var(--accent);
+    color: var(--white);
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.colis-etape-content h3 {
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.colis-etape-content p {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .marche-trouver-card { grid-template-columns: 80px 1fr; gap: 16px; }
+    .colis-grid { grid-template-columns: 1fr; }
+}
