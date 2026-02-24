@@ -1586,7 +1586,7 @@ footer {
 /* ── Section œufs ── */
 .oeufs-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 2fr;
     gap: 32px;
     align-items: start;
 }
@@ -1615,6 +1615,8 @@ footer {
     opacity: 0;
     transform: translateY(16px);
     transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .saviez-vous.visible {
