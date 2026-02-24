@@ -1693,8 +1693,13 @@ footer {
     width: 100%;
     height: 260px;
     object-fit: cover;
+    object-position: center center;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
+}
+
+.animal-photo--brebis {
+    object-position: center 40%;
 }
 
 .animal-content h3 {
