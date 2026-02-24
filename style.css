@@ -1586,7 +1586,7 @@ footer {
 /* ── Section œufs ── */
 .oeufs-grid {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 2fr 3fr;
     gap: 32px;
     align-items: start;
 }
@@ -1615,8 +1615,6 @@ footer {
     opacity: 0;
     transform: translateY(16px);
     transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s;
-    height: 100%;
-    box-sizing: border-box;
 }
 
 .saviez-vous.visible {
@@ -1909,4 +1907,54 @@ footer {
 
 .banner-ferme {
     height: 600px;
+}
+
+/* ── Layout photo + texte côte à côte (page produits) ── */
+.produit-animal-bloc {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 32px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.produit-animal-bloc--reverse {
+    grid-template-columns: 1fr 280px;
+}
+
+.produit-animal-bloc--reverse .produit-animal-photo {
+    order: 2;
+}
+
+.produit-animal-bloc--reverse .viande-section {
+    order: 1;
+}
+
+.produit-animal-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ── Photo oeufs ── */
+.oeufs-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .produit-animal-bloc,
+    .produit-animal-bloc--reverse {
+        grid-template-columns: 1fr;
+    }
+    .produit-animal-bloc--reverse .produit-animal-photo,
+    .produit-animal-bloc--reverse .viande-section {
+        order: unset;
+    }
 }
