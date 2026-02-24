@@ -1883,3 +1883,12 @@ footer {
     .marche-trouver-card { grid-template-columns: 80px 1fr; gap: 16px; }
     .colis-grid { grid-template-columns: 1fr; }
 }
+
+/* ── Titre marchés sur une ligne ── */
+.marches-titre {
+    font-family: var(--font-title);
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    color: var(--primary);
+    white-space: nowrap;
+    margin-bottom: 6px;
+}
