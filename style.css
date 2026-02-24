@@ -1887,7 +1887,7 @@ footer {
 /* ── Titre marchés sur une ligne ── */
 .marches-titre {
     font-family: var(--font-title);
-    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    font-size: 1.9rem;
     color: var(--primary);
     white-space: nowrap;
     margin-bottom: 6px;
@@ -1898,6 +1898,6 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 15%;
+    object-position: center 35%;
     filter: brightness(1.15) contrast(1.05) saturate(1.1);
 }
