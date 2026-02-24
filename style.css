@@ -1911,28 +1911,21 @@ footer {
 
 /* ── Layout photo + texte côte à côte (page produits) ── */
 .produit-animal-bloc {
-    display: grid;
-    grid-template-columns: 280px 1fr;
+    display: flex;
+    flex-direction: row;
     gap: 32px;
     align-items: center;
     margin-bottom: 24px;
 }
 
 .produit-animal-bloc--reverse {
-    grid-template-columns: 1fr 280px;
-}
-
-.produit-animal-bloc--reverse .produit-animal-photo {
-    order: 2;
-}
-
-.produit-animal-bloc--reverse .viande-section {
-    order: 1;
+    flex-direction: row-reverse;
 }
 
 .produit-animal-photo {
-    width: 100%;
-    height: 200px;
+    width: 260px;
+    min-width: 260px;
+    height: 180px;
     object-fit: cover;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
@@ -1951,10 +1944,11 @@ footer {
 @media (max-width: 768px) {
     .produit-animal-bloc,
     .produit-animal-bloc--reverse {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
-    .produit-animal-bloc--reverse .produit-animal-photo,
-    .produit-animal-bloc--reverse .viande-section {
-        order: unset;
+    .produit-animal-photo {
+        width: 100%;
+        min-width: unset;
+        height: 200px;
     }
 }
