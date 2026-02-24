@@ -1952,3 +1952,83 @@ footer {
         height: 200px;
     }
 }
+
+/* ── Grille viande 3 colonnes avec photo ── */
+.viande-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.viande-card-photo {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--primary);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.viande-card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.viande-card-photo--noimg {
+    display: flex;
+    align-items: center;
+}
+
+.viande-card-body {
+    padding: 16px 20px;
+}
+
+.viande-card-body p {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-top: 8px;
+    text-align: justify;
+}
+
+/* ── Section oeufs nouvelle organisation ── */
+.oeufs-top {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.oeufs-top .oeufs-text {
+    flex: 1;
+}
+
+.oeufs-photo-side {
+    width: 280px;
+    min-width: 280px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.saviez-vous--full {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.saviez-vous-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .viande-grid-3 { grid-template-columns: 1fr; }
+    .oeufs-top { flex-direction: column; }
+    .oeufs-photo-side { width: 100%; min-width: unset; }
+    .saviez-vous-cols { grid-template-columns: 1fr; }
+}
