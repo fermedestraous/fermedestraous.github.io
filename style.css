@@ -34,7 +34,7 @@
     padding: 0;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
     font-family: var(--font-body);
@@ -42,6 +42,7 @@ body {
     color: var(--text);
     line-height: 1.7;
     font-size: 1rem;
+    overflow-x: hidden;
 }
 
 img { display: block; max-width: 100%; }
@@ -808,6 +809,15 @@ footer {
 @media (max-width: 768px) {
 
     .top-left { display: none; }
+
+    .top-bar {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .top-right {
+        justify-content: center;
+    }
 
     .banner {
         height: 360px;
