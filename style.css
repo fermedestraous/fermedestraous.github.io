@@ -1432,11 +1432,9 @@ footer {
 }
 
 /* ── Bannière avec rotation pour redresser l'horizon ── */
-.banner-img-rotated {
-    width: 100%;
-    height: 100%;
+.banner img.banner-img-rotated {
     object-fit: cover;
-    object-position: center 60%;
+    object-position: center 70%;
 }
 
 /* ════════════════════════════════════════
@@ -2164,6 +2162,6 @@ footer {
 }
 
 /* ── Position spécifique banner pratiques ── */
-.banner-img-pratiques {
+.banner img.banner-img-pratiques {
     object-position: center 70%;
 }
