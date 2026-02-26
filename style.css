@@ -2149,3 +2149,13 @@ footer {
 @media (max-width: 768px) {
     .repartition-cards { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ── Animal bloc avec cadre (Option B) ── */
+.animal-bloc--cadre {
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--primary);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
