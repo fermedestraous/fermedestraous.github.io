@@ -206,6 +206,2174 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 15%;
+}
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(20, 35, 16, 0.35) 0%,
+        rgba(20, 35, 16, 0.65) 100%
+    );
+}
+
+.banner-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 24px;
+    gap: 12px;
+}
+
+.banner-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-lt);
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.2s forwards;
+}
+
+.banner h1 {
+    font-family: var(--font-title);
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+    margin: 4px 0;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.35s forwards;
+}
+
+.banner-tagline {
+    font-family: var(--font-title);
+    font-style: italic;
+    font-size: 1.25rem;
+    color: rgba(255,255,255,0.88);
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.5s forwards;
+}
+
+.banner-cta {
+    margin-top: 8px;
+    padding: 12px 28px;
+    background-color: var(--accent);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: var(--radius);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background 0.2s, transform 0.2s;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.65s forwards;
+}
+
+.banner-cta:hover {
+    background-color: var(--accent-lt);
+    transform: translateY(-2px);
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ════════════════════════════════════════
+   SECTIONS COMMUNES
+════════════════════════════════════════ */
+
+section {
+    padding: 60px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-header.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-header h2 {
+    font-family: var(--font-title);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.15;
+}
+
+.section-subtitle {
+    font-family: var(--font-title);
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-top: 6px;
+}
+
+.badge {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+}
+
+/* ── Séparateur ── */
+.divider {
+    text-align: center;
+    color: var(--accent);
+    font-size: 1.1rem;
+    letter-spacing: 0.6em;
+    padding: 0 0 8px;
+    opacity: 0.5;
+}
+
+/* ════════════════════════════════════════
+   SECTION INTRO
+════════════════════════════════════════ */
+
+.section-intro {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+    padding: 50px 0;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+}
+
+.intro-paragraph {
+    font-size: 1.08rem;
+    color: var(--text);
+    line-height: 1.8;
+    font-family: var(--font-body);
+    font-weight: 300;
+}
+
+.bio-logo {
+    width: 160px;
+    height: auto;
+    opacity: 0.9;
+}
+
+/* ════════════════════════════════════════
+   SECTION VALEURS
+════════════════════════════════════════ */
+
+.section-valeurs {
+    background: var(--bg);
+    padding: 50px 0;
+}
+
+.valeurs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.valeur-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-bottom: 3px solid var(--accent);
+    border-radius: var(--radius-lg);
+    padding: 30px 24px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.2s;
+}
+
+.valeur-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.valeur-card:nth-child(2) { transition-delay: 0.1s; }
+.valeur-card:nth-child(3) { transition-delay: 0.2s; }
+
+.valeur-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.valeur-icon {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.valeur-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.valeur-card p {
+    font-size: 0.93rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* ════════════════════════════════════════
+   SECTION PRODUITS
+════════════════════════════════════════ */
+
+.section-produits {
+    background: linear-gradient(160deg, #d4e4c4 0%, #eaf2e2 100%);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.produits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.produits-grid--single {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.produit-card {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.2s;
+}
+
+.produit-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.produit-card:nth-child(2) { transition-delay: 0.12s; }
+
+.produit-card:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.produit-card-inner {
+    padding: 28px 24px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    height: 100%;
+}
+
+.produit-card.highlight .produit-card-inner {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+.produit-card.highlight h3 {
+    color: var(--white);
+}
+
+.produit-card.highlight p {
+    color: rgba(255,255,255,0.85);
+}
+
+.produit-tag {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+}
+
+.produit-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.35rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.produit-card p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.65;
+}
+
+.btn-secondary {
+    display: inline-block;
+    margin-top: 14px;
+    color: var(--accent);
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+    transition: color 0.2s;
+}
+
+.btn-secondary:hover {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+.cta-container {
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* ════════════════════════════════════════
+   SECTION MARCHÉS
+════════════════════════════════════════ */
+
+.section-marches {
+    background: var(--bg);
+}
+
+.marches-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 60px;
+    align-items: center;
+}
+
+.marches-text h2 {
+    font-family: var(--font-title);
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    color: var(--primary);
+    margin-bottom: 6px;
+}
+
+.marches-list {
+    list-style: none;
+    margin: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.marches-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+}
+
+.marche-jour {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--primary);
+    min-width: 120px;
+    flex-shrink: 0;
+}
+
+.marche-jour small {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: var(--text-light);
+    display: block;
+    margin-top: 2px;
+}
+
+.marche-lieu {
+    font-size: 0.97rem;
+    color: var(--text-light);
+}
+
+.marche-lieu em {
+    font-style: italic;
+    font-size: 0.88rem;
+}
+
+.marches-map {
+    width: 460px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+/* ════════════════════════════════════════
+   BOUTONS GLOBAUX
+════════════════════════════════════════ */
+
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    padding: 13px 28px;
+    text-decoration: none;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(42, 74, 34, 0.25);
+}
+
+.btn:hover {
+    background: var(--primary-lt);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(42, 74, 34, 0.3);
+}
+
+.btn-outline {
+    display: inline-block;
+    color: var(--primary);
+    padding: 10px 22px;
+    text-decoration: none;
+    border-radius: var(--radius);
+    border: 2px solid var(--primary);
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* ════════════════════════════════════════
+   SECTION CONTACT
+════════════════════════════════════════ */
+
+.section-contact {
+    background: var(--card-bg);
+    border-top: 1px solid var(--border);
+}
+
+.contact-form {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(42, 74, 34, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+/* ════════════════════════════════════════
+   FOOTER
+════════════════════════════════════════ */
+
+footer {
+    background: var(--bg-dark);
+    color: rgba(255,255,255,0.75);
+    padding: 48px 0 0;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 40px;
+    align-items: start;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-title {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    color: var(--white);
+    font-style: italic;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer-brand p {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.5);
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-nav a {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+    color: var(--accent-lt);
+}
+
+.footer-boutique .btn {
+    background: var(--accent);
+    box-shadow: none;
+    font-size: 0.9rem;
+    padding: 11px 22px;
+}
+
+.footer-boutique .btn:hover {
+    background: var(--accent-lt);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 16px;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.3);
+}
+
+/* ════════════════════════════════════════
+   RESPONSIVE — MOBILE
+════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+    .top-left { display: none; }
+
+    .top-bar {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .top-right {
+        justify-content: center;
+    }
+
+    .banner {
+        height: 360px;
+    }
+
+    .banner h1 {
+        font-size: 2.4rem;
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .intro-logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .valeurs-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .produits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .marches-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .deco-circle, .marches-map {
+        display: none;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .marche-jour {
+        min-width: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .boutique-btn span { display: none; }
+
+    .banner {
+        height: 300px;
+    }
+
+    section { padding: 40px 0; }
+}
+
+/* ════════════════════════════════════════
+   PAGE NOTRE FERME — TIMELINE
+════════════════════════════════════════ */
+
+.section-histoire {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.timeline {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 80px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--border), var(--accent), var(--border));
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 28px;
+    margin-bottom: 32px;
+    align-items: start;
+    opacity: 0;
+    transform: translateX(-16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.timeline-item:nth-child(2) { transition-delay: 0.05s; }
+.timeline-item:nth-child(3) { transition-delay: 0.10s; }
+.timeline-item:nth-child(4) { transition-delay: 0.15s; }
+.timeline-item:nth-child(5) { transition-delay: 0.20s; }
+.timeline-item:nth-child(6) { transition-delay: 0.25s; }
+.timeline-item:nth-child(7) { transition-delay: 0.30s; }
+.timeline-item:nth-child(8) { transition-delay: 0.35s; }
+
+.timeline-date {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 2px;
+    position: relative;
+}
+
+.timeline-date::after {
+    content: '';
+    position: absolute;
+    right: -7px;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    border: 2px solid var(--card-bg);
+}
+
+.timeline-content {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.timeline-item--highlight .timeline-date {
+    color: var(--accent);
+}
+
+.timeline-item--highlight .timeline-date::after {
+    background: var(--primary);
+    width: 14px;
+    height: 14px;
+    right: -8px;
+}
+
+.timeline-item--highlight .timeline-content {
+    border-left-color: var(--primary);
+    background: #eef5e8;
+}
+
+/* ════════════════════════════════════════
+   PAGE NOTRE FERME — GÉOGRAPHIE
+════════════════════════════════════════ */
+
+.section-geo {
+    background: var(--bg);
+}
+
+.geo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.geo-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--primary);
+    border-radius: var(--radius-lg);
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.2s;
+}
+
+.geo-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.geo-card:nth-child(2) { transition-delay: 0.1s; }
+.geo-card:nth-child(3) { transition-delay: 0.2s; }
+
+.geo-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.geo-icon { font-size: 2rem; margin-bottom: 10px; }
+
+.geo-lieu {
+    font-family: var(--font-title);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.geo-surface {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--white);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 3px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.geo-card p {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.geo-total {
+    text-align: center;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: var(--radius);
+    padding: 16px 24px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.geo-total strong {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+    .timeline::before { left: 60px; }
+    .timeline-item { grid-template-columns: 60px 1fr; gap: 16px; }
+    .timeline-date { font-size: 1.1rem; }
+    .geo-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Photo bandeau ── */
+.photo-bandeau {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+}
+
+.photo-bandeau img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 60%;
+    filter: brightness(0.85);
+}
+
+.photo-bandeau-caption {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+    background: rgba(0,0,0,0.45);
+    color: white;
+    font-family: var(--font-title);
+    font-style: italic;
+    font-size: 0.9rem;
+    padding: 5px 12px;
+    border-radius: 4px;
+}
+
+/* ── Photo dans carte geo ── */
+.geo-photo {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin-top: 14px;
+}
+
+@media (max-width: 768px) {
+    .photo-bandeau { height: 220px; }
+}
+
+/* ════════════════════════════════════════
+   PAGE NOS PRATIQUES AGRICOLES
+════════════════════════════════════════ */
+
+.section-pratiques {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.pratiques-intro {
+    max-width: 720px;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: 1.05rem;
+    color: var(--text);
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.pratiques-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.pratique-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-bottom: 3px solid var(--accent);
+    border-radius: var(--radius-lg);
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.2s;
+}
+
+.pratique-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pratique-card:nth-child(2) { transition-delay: 0.1s; }
+.pratique-card:nth-child(3) { transition-delay: 0.2s; }
+
+.pratique-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.pratique-icon {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.pratique-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.pratique-card p {
+    font-size: 0.93rem;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+/* ── Bien-être animal ── */
+.section-bienetre {
+    background: var(--bg);
+}
+
+.bienetre-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.bienetre-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
+    border-radius: var(--radius-lg);
+    padding: 26px 24px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.bienetre-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bienetre-card:nth-child(2) { transition-delay: 0.1s; }
+.bienetre-card:nth-child(3) { transition-delay: 0.15s; }
+.bienetre-card:nth-child(4) { transition-delay: 0.2s; }
+
+.bienetre-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.bienetre-emoji {
+    font-size: 1.8rem;
+}
+
+.bienetre-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.25rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.bienetre-card p {
+    font-size: 0.93rem;
+    color: var(--text-light);
+    line-height: 1.75;
+}
+
+/* ── Soins naturels ── */
+.section-soins {
+    background: var(--card-bg);
+    border-top: 1px solid var(--border);
+}
+
+.soins-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.soins-text p {
+    font-size: 0.97rem;
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+.soins-remedes {
+    background: var(--primary);
+    color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+}
+
+.soins-remedes h3 {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    color: var(--white);
+    font-style: italic;
+}
+
+.remedes-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.remedes-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.9);
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.remedes-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.remedes-list li span {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .pratiques-grid { grid-template-columns: 1fr; }
+    .bienetre-grid { grid-template-columns: 1fr; }
+    .soins-inner { grid-template-columns: 1fr; gap: 28px; }
+}
+
+/* ── Liste intro page d'accueil ── */
+.intro-list {
+    margin: 10px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.intro-list li {
+    font-size: 0.97rem;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ════════════════════════════════════════
+   PAGE NOS ANIMAUX
+════════════════════════════════════════ */
+
+.section-animaux {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.section-animaux--alt {
+    background: var(--bg);
+}
+
+.race-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.race-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--accent);
+    border-radius: var(--radius-lg);
+    padding: 26px 24px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.race-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.race-card:nth-child(2) { transition-delay: 0.1s; }
+.race-card:nth-child(3) { transition-delay: 0.2s; }
+
+.race-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+}
+
+.race-card--wide {
+    grid-column: 1 / -1;
+}
+
+.race-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+.race-card-header h3 {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.race-tag {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 3px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+.race-card p {
+    font-size: 0.94rem;
+    color: var(--text);
+    line-height: 1.75;
+    text-align: justify;
+}
+
+.race-note {
+    margin-top: 24px;
+    padding: 16px 22px;
+    background: var(--card-bg);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    color: var(--text-light);
+    font-style: italic;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .race-grid { grid-template-columns: 1fr; }
+    .race-card--wide { grid-column: 1; }
+    .race-card-header { flex-direction: column; align-items: flex-start; }
+}
+
+/* ── Photo dans carte animal ── */
+.race-photo {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin-bottom: 4px;
+}
+
+/* ── Bannière avec rotation pour redresser l'horizon ── */
+.banner-img-rotated {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 60%;
+    transform: rotate(-2deg) scale(1.04);
+    transform-origin: center center;
+}
+
+/* ════════════════════════════════════════
+   PAGE NOS PRODUITS
+════════════════════════════════════════ */
+
+.section-produit {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.section-produit--alt {
+    background: var(--bg);
+}
+
+/* ── Bloc philosophie ── */
+.philosophie-block {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius-lg);
+    padding: 28px 32px;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.philosophie-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.philosophie-block h3 {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    color: var(--primary);
+    font-style: italic;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.philosophie-block p {
+    font-size: 0.96rem;
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+.philosophie-block p:last-child {
+    margin-bottom: 0;
+}
+
+/* ── Grille viande ── */
+.viande-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 36px;
+}
+
+.viande-section {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--primary);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.viande-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.viande-section:nth-child(2) { transition-delay: 0.1s; }
+
+.viande-titre {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.viande-items {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.viande-item {
+    padding-bottom: 14px;
+    border-bottom: 1px dashed var(--border);
+}
+
+.viande-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.viande-label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+.viande-item p {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    line-height: 1.65;
+    text-align: justify;
+}
+
+/* ── Modalités de vente ── */
+.modalites-block {
+    background: linear-gradient(135deg, #eaf2e2 0%, #f4f8f0 100%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 32px;
+    margin-bottom: 8px;
+}
+
+.modalites-block p {
+    font-size: 0.96rem;
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 14px;
+    text-align: justify;
+}
+
+.modalites-block p:last-of-type {
+    margin-bottom: 20px;
+}
+
+.modalites-cta {
+    text-align: center;
+}
+
+/* ── Section œufs ── */
+.oeufs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.oeufs-text p {
+    font-size: 0.96rem;
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 14px;
+    text-align: justify;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.oeufs-text.visible p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.saviez-vous {
+    background: var(--primary);
+    color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s;
+}
+
+.saviez-vous.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.saviez-vous-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.saviez-vous-header span {
+    font-size: 1.5rem;
+}
+
+.saviez-vous-header h3 {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    color: var(--white);
+    font-style: italic;
+}
+
+.saviez-vous p {
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.75;
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+.saviez-vous p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .viande-grid { grid-template-columns: 1fr; }
+    .oeufs-grid { grid-template-columns: 1fr; }
+    .philosophie-block, .modalites-block { padding: 20px; }
+}
+
+/* ── Layout photo + texte côte à côte (page animaux) ── */
+.animal-bloc {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 32px;
+    align-items: start;
+    margin-bottom: 24px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animal-bloc.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animal-bloc--reverse {
+    grid-template-columns: 1fr 300px;
+}
+
+.animal-bloc--reverse .animal-photo {
+    order: 2;
+}
+
+.animal-bloc--reverse .animal-content {
+    order: 1;
+}
+
+.animal-photo {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.animal-photo--brebis {
+    object-position: center 40%;
+}
+
+.animal-content h3 {
+    font-family: var(--font-title);
+    font-size: 1.35rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.animal-content p {
+    font-size: 0.93rem;
+    color: var(--text);
+    line-height: 1.75;
+    margin-top: 8px;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .animal-bloc,
+    .animal-bloc--reverse {
+        grid-template-columns: 1fr;
+    }
+    .animal-bloc--reverse .animal-photo,
+    .animal-bloc--reverse .animal-content {
+        order: unset;
+    }
+    .animal-photo {
+        height: 200px;
+    }
+}
+
+/* ════════════════════════════════════════
+   PAGE NOUS TROUVER
+════════════════════════════════════════ */
+
+.section-trouver {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.section-trouver--alt {
+    background: var(--bg);
+}
+
+.trouver-intro {
+    max-width: 720px;
+    margin: 0 auto 40px;
+    text-align: justify;
+    font-size: 1.02rem;
+    color: var(--text);
+    line-height: 1.8;
+}
+
+/* ── Cartes marchés ── */
+.marches-trouver {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.marche-trouver-card {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    gap: 24px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px 24px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateX(-16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.marche-trouver-card.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.marche-trouver-card:nth-child(2) { transition-delay: 0.1s; }
+.marche-trouver-card:nth-child(3) { transition-delay: 0.2s; }
+
+.marche-regulier {
+    border-left: 4px solid var(--primary);
+}
+
+.marche-occasionnel {
+    border-left: 4px solid var(--accent);
+}
+
+.marche-trouver-jour {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-align: center;
+}
+
+.marche-occasionnel .marche-trouver-jour {
+    color: var(--accent);
+}
+
+.marche-trouver-info h3 {
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.ou {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.marche-frequence {
+    font-size: 0.82rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* ── Étapes colis ── */
+.colis-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.colis-etape {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.colis-etape.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.colis-etape:nth-child(2) { transition-delay: 0.1s; }
+.colis-etape:nth-child(3) { transition-delay: 0.2s; }
+
+.colis-numero {
+    width: 48px;
+    height: 48px;
+    background: var(--accent);
+    color: var(--white);
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.colis-etape-content h3 {
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.colis-etape-content p {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .marche-trouver-card { grid-template-columns: 80px 1fr; gap: 16px; }
+    .colis-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Titre marchés sur une ligne ── */
+.marches-titre {
+    font-family: var(--font-title);
+    font-size: 1.9rem;
+    color: var(--primary);
+    white-space: nowrap;
+    margin-bottom: 6px;
+}
+
+/* ── Photo bannière Notre Ferme ── */
+.banner-img-ferme {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    filter: brightness(1.15) contrast(1.05) saturate(1.1);
+}
+
+.banner-ferme {
+    height: 600px;
+}
+
+/* ── Layout photo + texte côte à côte (page produits) ── */
+.produit-animal-bloc {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.produit-animal-bloc--reverse {
+    flex-direction: row-reverse;
+}
+
+.produit-animal-photo {
+    width: 260px;
+    min-width: 260px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ── Photo oeufs ── */
+.oeufs-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .produit-animal-bloc,
+    .produit-animal-bloc--reverse {
+        flex-direction: column;
+    }
+    .produit-animal-photo {
+        width: 100%;
+        min-width: unset;
+        height: 200px;
+    }
+}
+
+/* ── Grille viande 3 colonnes avec photo ── */
+.viande-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.viande-card-photo {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--primary);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.viande-card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.viande-card-photo--noimg {
+    display: flex;
+    align-items: center;
+}
+
+.viande-card-body {
+    padding: 16px 20px;
+}
+
+.viande-card-body p {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-top: 8px;
+    text-align: justify;
+}
+
+/* ── Section oeufs nouvelle organisation ── */
+.oeufs-top {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.oeufs-top .oeufs-text {
+    flex: 1;
+}
+
+.oeufs-photo-side {
+    width: 280px;
+    min-width: 280px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.saviez-vous--full {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.saviez-vous-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .viande-grid-3 { grid-template-columns: 1fr; }
+    .oeufs-top { flex-direction: column; }
+    .oeufs-photo-side { width: 100%; min-width: unset; }
+    .saviez-vous-cols { grid-template-columns: 1fr; }
+}
+
+/* ── Répartition des surfaces (ferme.html) ── */
+.repartition-block {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 32px;
+    margin-top: 32px;
+    box-shadow: var(--shadow);
+}
+
+.repartition-titre {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align: center;
+    font-style: italic;
+}
+
+.repartition-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.repartition-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.repartition-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.repartition-emoji {
+    font-size: 1.1rem;
+}
+
+.repartition-nom {
+    flex: 1;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.repartition-pct {
+    font-family: var(--font-title);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    min-width: 40px;
+    text-align: right;
+}
+
+.repartition-bar-bg {
+    width: 100%;
+    height: 10px;
+    background: var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.repartition-bar {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 1s ease;
+}
+
+.repartition-ha {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* ── Répartition cartes colorées ── */
+.repartition-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.repartition-card {
+    background: var(--rc-color);
+    border-radius: var(--radius-lg);
+    padding: 20px 16px;
+    text-align: center;
+    color: white;
+}
+
+.repartition-card-pct {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.repartition-card-emoji {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.repartition-card-nom {
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.3;
+    opacity: 0.92;
+}
+
+@media (max-width: 768px) {
+    .repartition-cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Animal bloc avec cadre (Option B) ── */
+.animal-bloc--cadre {
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--primary);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+/* ── Position spécifique banner pratiques ── */
+.banner-img-pratiques {
+    object-position: center 30%;
+}/* ═══════════════════════════════════════════════════════════
+   FERME D'ESTRAOUS — style.css
+   Palette : vert forêt · crème · terre · or
+   Typo : Cormorant Garamond (titres) + DM Sans (corps)
+═══════════════════════════════════════════════════════════ */
+
+:root {
+    --primary:    #2d4a1e;   /* Vert foncé profond — titres affiche */
+    --primary-lt: #4a7035;   /* Vert moyen */
+    --accent:     #b83a2a;   /* Rouge terracotta — accent "VEAU" affiche */
+    --accent-lt:  #d45f4e;   /* Terracotta clair */
+    --bg:         #dce8d0;   /* Vert sauge adouci — fond affiche */
+    --bg-light:   #edf4e6;   /* Sauge très clair */
+    --bg-dark:    #1e3014;   /* Vert très foncé pour footer */
+    --text:       #1a2a10;   /* Quasi-noir verdâtre */
+    --text-light: #4a6035;   /* Vert moyen pour textes secondaires */
+    --white:      #ffffff;
+    --border:     #b0c89a;   /* Vert sauge bordure */
+    --card-bg:    #f4f8f0;   /* Blanc légèrement teinté vert — encadrés affiche */
+
+    --radius:     8px;
+    --radius-lg:  16px;
+    --shadow:     0 2px 16px rgba(29, 50, 18, 0.09);
+    --shadow-lg:  0 8px 40px rgba(29, 50, 18, 0.16);
+
+    --font-title: 'Cormorant Garamond', Georgia, serif;
+    --font-body:  'DM Sans', system-ui, sans-serif;
+}
+
+/* ── Reset & base ── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html { scroll-behavior: smooth; overflow-x: hidden; }
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 1rem;
+    overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; }
+
+a { color: inherit; }
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ════════════════════════════════════════
+   HEADER & NAVIGATION
+════════════════════════════════════════ */
+
+header {
+    position: relative;
+    background-color: var(--primary);
+}
+
+/* ── Bannière ── */
+.banner {
+    position: relative;
+    height: 480px;
+    overflow: hidden;
+    margin-top: 54px;
+}
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    padding: 8px 24px;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ── Barre du haut ── */
+
+.intro-paragraph {
+    text-align: justify;
+}
+
+.top-left .ferme-name-small {
+    font-family: var(--font-title);
+    color: rgba(255,255,255,0.7);
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    font-style: italic;
+}
+
+.top-right {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.boutique-btn {
+    height: 38px;
+    padding: 0 18px;
+    background-color: var(--accent);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: var(--radius);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+}
+
+.boutique-btn:hover {
+    background-color: var(--accent-lt);
+    transform: translateY(-1px);
+}
+
+.menu-container {
+    position: relative;
+}
+
+.menu-btn {
+    height: 38px;
+    padding: 0 16px;
+    background-color: rgba(255,255,255,0.12);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 500;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: var(--radius);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.menu-btn:hover {
+    background-color: rgba(255,255,255,0.22);
+}
+
+/* ── Menu déroulant ── */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    padding: 8px 0;
+    z-index: 1000;
+    min-width: 210px;
+    border: 1px solid var(--border);
+    animation: fadeDown 0.18s ease;
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    font-weight: 400;
+    transition: background 0.15s, color 0.15s;
+    border-left: 3px solid transparent;
+}
+
+.dropdown-menu li a:hover,
+.dropdown-menu li a.active {
+    background-color: var(--bg);
+    color: var(--primary);
+    border-left-color: var(--accent);
+    font-weight: 500;
+}
+
+/* ── Bannière ── */
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     object-position: center 40%;
 }
 
