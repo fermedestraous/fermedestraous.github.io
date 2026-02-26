@@ -202,12 +202,6 @@ header {
 }
 
 /* ── Bannière ── */
-.banner {
-    position: relative;
-    height: 480px;
-    overflow: hidden;
-}
-
 .banner img {
     width: 100%;
     height: 100%;
