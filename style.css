@@ -208,6 +208,8 @@ header {
     object-fit: cover;
     object-position: center 15%;
 }
+
+.banner-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(
