@@ -1435,8 +1435,6 @@ footer {
     height: 100%;
     object-fit: cover;
     object-position: center 60%;
-    transform: rotate(-2deg) scale(1.0);
-    transform-origin: center center;
 }
 
 /* ════════════════════════════════════════
@@ -2165,5 +2163,5 @@ footer {
 
 /* ── Position spécifique banner pratiques ── */
 .banner-img-pratiques {
-    object-position: center 50%;
+    object-position: center 70%;
 }
