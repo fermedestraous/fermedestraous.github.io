@@ -862,6 +862,21 @@ footer {
     .marche-jour {
         min-width: 90px;
     }
+
+    .marches-list li {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .marche-lieu {
+        width: 100%;
+        word-break: break-word;
+    }
+
+    .marches-text h2 {
+        font-size: 1.6rem;
+        word-break: break-word;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2164,4 +2179,16 @@ footer {
 /* ── Position spécifique banner pratiques ── */
 .banner img.banner-img-pratiques {
     object-position: center 25% !important;
+}
+
+/* ── Liens dans le texte ── */
+.texte-lien {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.texte-lien:hover {
+    color: var(--accent);
 }
