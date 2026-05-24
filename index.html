@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no, address=no, email=no">
-    <title>Notre Ferme — Ferme d'Estraous</title>
-    <meta name="description" content="L'histoire et la géographie de la Ferme d'Estraous, élevage biologique en Haute-Garonne.">
+    <title>Ferme d'Estraous — Agriculture Biologique</title>
+    <meta name="description" content="Ferme d'Estraous — Viande bio, vente directe et marchés locaux en Haute-Garonne, au pied des Pyrénées.">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
@@ -14,7 +14,8 @@
 <!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
 <header>
     <div class="top-bar">
-        <div class="top-left"></div>
+        <div class="top-left">
+        </div>
         <div class="top-right">
             <a href="trouver.html#commander-colis" class="boutique-btn" target="_blank">
                 🛒 Réserver nos colis
@@ -23,8 +24,8 @@
                 <button class="menu-btn" aria-label="Ouvrir le menu">Menu ☰</button>
                 <nav class="dropdown-menu" aria-label="Navigation principale">
                     <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="ferme.html" class="active">Notre Ferme</a></li>
+                        <li><a href="index.html" class="active">Accueil</a></li>
+                        <li><a href="ferme.html">Notre Ferme</a></li>
                         <li><a href="pratiques.html">Nos Pratiques</a></li>
                         <li><a href="animaux.html">Nos Animaux</a></li>
                         <li><a href="produits.html">Nos Produits</a></li>
@@ -35,13 +36,14 @@
         </div>
     </div>
 
-    <div class="banner banner-ferme">
-        <img src="Photos/bandeau-haut/Panorama_poules.jpg" alt="Éleveuse avec ses poules dans les prairies de la Ferme d'Estraous" class="banner-img-ferme">
+    <div class="banner">
+        <img src="Photos/bandeau-haut/panorama.jpg" alt="Vue panoramique de la Ferme d'Estraous">
         <div class="banner-overlay"></div>
         <div class="banner-content">
-            <span class="banner-eyebrow">Depuis 1996</span>
-            <h1>Notre Ferme</h1>
-            <p class="banner-tagline">Une histoire familiale ancrée dans le Comminges</p>
+            <span class="banner-eyebrow">Agriculture Biologique · Haute-Garonne</span>
+            <h1>Ferme d'Estraous</h1>
+            <p class="banner-tagline">Élevage en plein air, au pied des Pyrénées</p>
+
         </div>
     </div>
 </header>
@@ -49,156 +51,132 @@
 <!-- ═══════════════════════════════ MAIN ═══════════════════════════════ -->
 <main>
 
-    <!-- ── Section histoire ── -->
-    <section class="section-histoire">
-        <div class="container">
-            <div class="section-header">
-                <h2>Brève Histoire</h2>
-                <p class="section-subtitle">Près de 30 ans d'engagement pour une agriculture respectueuse</p>
+    <!-- ── Section intro ── -->
+    <section class="section-intro">
+        <div class="container intro-grid">
+            <div class="intro-text">
+                <span class="badge">🌿 Certifié Agriculture Biologique</span>
+                <p id="txt-introduction" class="intro-paragraph">Chargement des informations…</p>
             </div>
-
-            <div class="timeline">
-
-                <div class="timeline-item">
-                    <div class="timeline-date">1996</div>
-                    <div class="timeline-content">
-                        <p>Naissance de la ferme, portée par nos idéaux de <strong>protection de l'environnement</strong>, de bien-être animal et de santé humaine.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">1997</div>
-                    <div class="timeline-content">
-                        <p>Construction de la <strong>fromagerie</strong> et arrivée des premières brebis laitières.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">2000</div>
-                    <div class="timeline-content">
-                        <p>Arrivée des premières <strong>vaches jersiaises</strong>, issues d'un troupeau renommé à Orléans.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">2014</div>
-                    <div class="timeline-content">
-                        <p>Nouvel essor avec de nouvelles terres familiales. Début de la <strong>production de fromage de chèvre</strong>. Les ventes se concentrent sur les marchés commingeois.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">2015</div>
-                    <div class="timeline-content">
-                        <p>Début de la <strong>conversion au label Agriculture Biologique</strong> — élevage et transformation.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">2016</div>
-                    <div class="timeline-content">
-                        <p>Formation du <strong>GAEC familial</strong> — Groupement d'Exploitation en Commun.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">2017</div>
-                    <div class="timeline-content">
-                        <p>Obtention de la <strong>certification Agriculture Biologique</strong> 🌿</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item timeline-item--highlight">
-                    <div class="timeline-date">2024</div>
-                    <div class="timeline-content">
-                        <p>Tournant majeur : remplacement de la production de fromage par celle d'<strong>œufs</strong>, une source de protéines accessible à tous. Développement de l'<strong>agroforesterie</strong>.</p>
-                    </div>
-                </div>
-
+            <div class="intro-logo">
+                <img src="Photos/bio/certifié_AB.jpg" alt="Label Agriculture Biologique" class="bio-logo">
             </div>
         </div>
     </section>
 
-    <!-- ── Photo intermédiaire ── -->
-    <div class="photo-bandeau">
-        <img src="Photos/ferme/paysage_vaches.JPG" alt="Vaches au pâturage sur les prairies de la Ferme d'Estraous">
-        <div class="photo-bandeau-caption">Nos vaches en plein air, sur les coteaux du Comminges</div>
+    <!-- ── Séparateur décoratif ── -->
+    <div class="divider">
+        <span>✦</span>
     </div>
 
-    <!-- ── Séparateur ── -->
-    <div class="divider"><span>✦</span></div>
+    <!-- ── Section valeurs ── -->
+    <section class="section-valeurs">
+        <div class="container">
+            <div class="valeurs-grid">
+                <div class="valeur-card">
+                    <div class="valeur-icon">🌾</div>
+                    <h3>Bio & Local</h3>
+                    <p>Certification Agriculture Biologique, sans OGM ni pesticides de synthèse.</p>
+                </div>
+                <div class="valeur-card">
+                    <div class="valeur-icon">🐄</div>
+                    <h3>Bien-être animal</h3>
+                    <p>Nos animaux vivent en plein air, sur des prairies naturelles au pied des Pyrénées.</p>
+                </div>
+                <div class="valeur-card">
+                    <div class="valeur-icon">🤝</div>
+                    <h3>Circuit court</h3>
+                    <p>Vente directe, sans intermédiaire — vous savez d'où vient votre viande.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- ── Section géographie ── -->
-    <section class="section-geo">
+    <!-- ── Section produits ── -->
+    <section class="section-produits">
         <div class="container">
             <div class="section-header">
-                <h2>Notre Ferme</h2>
-                <p class="section-subtitle">85 hectares répartis sur trois îlots en Haute-Garonne</p>
+                <h2>Nos Produits</h2>
+                <p class="section-subtitle">Viande bio et œufs frais, vendus en circuits courts — les marchés de plein vent du Comminges.</p>
             </div>
-
-            <div class="geo-grid">
-
-                <div class="geo-card">
-                    <div class="geo-icon">🏔️</div>
-                    <div class="geo-lieu">Aulon</div>
-                    <div class="geo-surface">18 ha</div>
-                    <p>Coteaux calcaires secs dans les <strong>Petites Pyrénées</strong>.</p>
-                    <img src="Photos/ferme/poules_maison.JPG" alt="La ferme d'Aulon avec vue sur les Pyrénées" class="geo-photo">
-                </div>
-
-                <div class="geo-card">
-                    <div class="geo-icon">🌿</div>
-                    <div class="geo-lieu">Lestelle-de-St-Martory</div>
-                    <div class="geo-surface">27 ha</div>
-                    <p>Coteaux argilo-calcaires et plaine de la rivière du <strong>Jô</strong>, dans les Petites Pyrénées.</p>
-                </div>
-
-                <div class="geo-card">
-                    <div class="geo-icon">🌾</div>
-                    <div class="geo-lieu">Plaine de la Garonne</div>
-                    <div class="geo-surface">40 ha</div>
-                    <p>Plaine <strong>limono-sableuse</strong> en bord de Garonne.</p>
-                </div>
-
-            </div>
-
-            <div class="geo-total">
-                <span>Surface totale :</span>
-                <strong>85 hectares</strong>
-            </div>
-
-            <!-- ── Répartition des surfaces ── -->
-            <div style="background: white; border: 1px solid #d8e6cc; border-radius: 12px; padding: 28px 32px; margin-top: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: #2d4a1e; font-weight: 600; margin-bottom: 24px; text-align: center; font-style: italic;">Répartition des surfaces</h3>
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
-
-                    <div style="background: #2d4a1e; border-radius: 12px; padding: 14px 12px; text-align: center; color: white;">
-                        <div style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; line-height: 1; margin-bottom: 6px;">65 %</div>
-                        <div style="font-size: 1.6rem; margin-bottom: 6px;">🌿</div>
-                        <div style="font-size: 0.85rem; font-weight: 500; line-height: 1.3; opacity: 0.92;">Prairies naturelles</div>
+            <div class="produits-grid produits-grid--single">
+                <div class="produit-card highlight">
+                    <div class="produit-card-inner">
+                        <span class="produit-tag">À venir</span>
+                        <h3>🥩 Prochain colis de viande</h3>
+                        <p id="txt-prochain-colis">Chargement des informations…</p>
                     </div>
-
-                    <div style="background: #c8891a; border-radius: 12px; padding: 14px 12px; text-align: center; color: white;">
-                        <div style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; line-height: 1; margin-bottom: 6px;">15 %</div>
-                        <div style="font-size: 1.6rem; margin-bottom: 6px;">🌾</div>
-                        <div style="font-size: 0.85rem; font-weight: 500; line-height: 1.3; opacity: 0.92;">Céréales</div>
-                    </div>
-
-                    <div style="background: #4a9470; border-radius: 12px; padding: 14px 12px; text-align: center; color: white;">
-                        <div style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; line-height: 1; margin-bottom: 6px;">10 %</div>
-                        <div style="font-size: 1.6rem; margin-bottom: 6px;">🌱</div>
-                        <div style="font-size: 0.85rem; font-weight: 500; line-height: 1.3; opacity: 0.92;">Prairies semées</div>
-                    </div>
-
-                    <div style="background: #7a5230; border-radius: 12px; padding: 14px 12px; text-align: center; color: white;">
-                        <div style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; line-height: 1; margin-bottom: 6px;">10 %</div>
-                        <div style="font-size: 1.6rem; margin-bottom: 6px;">🌳</div>
-                        <div style="font-size: 0.85rem; font-weight: 500; line-height: 1.3; opacity: 0.92;">Bois et landes</div>
-                    </div>
-
                 </div>
             </div>
+            <div class="cta-container">
+                <a href="trouver.html#commander-colis" class="btn" target="_blank">🛒 Réserver un colis de viande</a>
+            </div>
+        </div>
+    </section>
 
+    <!-- ── Section marchés ── -->
+    <section class="section-marches">
+        <div class="container">
+            <div class="marches-inner">
+                <div class="marches-text">
+                    <h2 class="marches-titre">Retrouvez-nous sur les marchés</h2>
+                    <p class="section-subtitle">En Haute-Garonne, tout au long de l'année</p>
+                    <ul class="marches-list">
+                        <li>
+                            <span class="marche-jour">Lundi</span>
+                            <span class="marche-lieu">Marché de Salies-du-Salat</span>
+                        </li>
+                        <li>
+                            <span class="marche-jour">Samedi</span>
+                            <span class="marche-lieu">Cazères <em>(semaines paires)</em> ou Aspet <em>(semaines impaires)</em></span>
+                        </li>
+                        <li>
+                            <span class="marche-jour">Mercredi <small>occasionnel</small></span>
+                            <span class="marche-lieu">Boulogne-sur-Gesse ou Aspet</span>
+                        </li>
+                    </ul>
+                    <a href="trouver.html" class="btn-outline">Voir toutes nos adresses →</a>
+                </div>
+                <div class="marches-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93102.9929401435!2d0.7575164825537002!3d43.17867898805371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a91e1b45ad195d%3A0x928aa88d5a3a231b!2sThiebaut%20Pascale%20Pierette!5e0!3m2!1sfr!2sfr!4v1771956304085!5m2!1sfr!2sfr"
+                        width="100%"
+                        height="360"
+                        style="border:0; border-radius: 12px;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Localisation Ferme d'Estraous">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Section contact ── -->
+    <section class="section-contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nous contacter</h2>
+                <p class="section-subtitle">Une question sur nos produits, recevoir une notification des prochains colis de viande ou bien une commande spéciale ? Écrivez-nous.</p>
+            </div>
+            <form class="contact-form" action="https://formspree.io/f/mgorkgvy" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Votre nom</label>
+                        <input type="text" id="name" name="name" placeholder="Jean Dupont" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Votre email</label>
+                        <input type="email" id="email" name="email" placeholder="jean@exemple.fr" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Votre message</label>
+                    <textarea id="message" name="message" placeholder="Bonjour, je souhaite…" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn">Envoyer le message</button>
+            </form>
         </div>
     </section>
 
@@ -248,14 +226,41 @@ document.addEventListener("DOMContentLoaded", () => {
     // ── Animations au scroll ──
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add('visible');
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.timeline-item, .geo-card, .section-header').forEach(el => {
+    document.querySelectorAll('.valeur-card, .produit-card, .section-header').forEach(el => {
         observer.observe(el);
     });
 
+    // ── Chargement Google Sheets ──
+    const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTB3Jt4kUljHwTgUbPsbVGGD0gC79-hA50OVEz2wfTbX-TX6LBxyBkJ3mCK-SPe8UFXgkzFLp9_VBxE/pub?output=csv';
+
+    async function loadData() {
+        try {
+            const response = await fetch(sheetUrl);
+            const data = await response.text();
+            const rows = data.split(/\r?\n/);
+
+            rows.forEach((row, index) => {
+                if (index === 0) return;
+                const match = row.match(/^"?([^",]+)"?,?(.+)$/);
+                if (match) {
+                    const key = match[1].trim().toLowerCase().replace(/_/g, '-');
+                    let value = match[2].trim().replace(/^"|"$/g, '').replace(/""/g, '"');
+                    const el = document.getElementById(`txt-${key}`);
+                    if (el) el.innerText = value;
+                }
+            });
+        } catch (e) {
+            console.error("Erreur de chargement :", e);
+        }
+    }
+
+    loadData();
 });
 </script>
 
